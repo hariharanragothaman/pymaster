@@ -13,5 +13,16 @@ q.insert(1, 7)  # Inserts value at given index
 removed_element = q.pop()  # Returns an element from right-size of the queue
 left_pop = q.popleft()  # Pops from left-side used in BFS
 
-# deque also supports functions such as len(), reverse(), sum() etc
+# deque also supports functions such as len(), reverse(), sum() etc & is subscriptable
 # Famous deque recipes are 'tail' and 'moving-average'
+"""
+# Bounded length queues can provide functionality of tail filter in Unix
+"""
+
+
+def tail(filename, n=10):
+    with open(filename) as f:
+        return deque(f, n)
+
+# Another approach to using deque is to maintain a sequence of recently added elements
+# By appending to the right and popping from the left - Transforms into fixed sliding window
