@@ -6,11 +6,18 @@ def is_sub_sequence1(s, t):
             index = t.index(s)
         except ValueError:
             return False
-        t = t[index+1:]
+        t = t[index + 1:]
     return True
+
 
 # Method 2
 def is_sub_sequence2(s, t):
     t = iter(t)
     return all(c in t for c in s)
 
+
+# To generate all possible sub-strings - brute-force
+strs = "Success"
+for i in range(len(strs)):
+    for j in range(i + 1, len(strs) + 1):
+        print(strs[i:j])

@@ -19,4 +19,3 @@ def get_rows(matrice):
 
 def get_columns(matrice):
     return zip(*matrice)
-
