@@ -1,0 +1,3 @@
+"""
+Common recipes in Trees
+"""

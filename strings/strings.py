@@ -9,7 +9,6 @@ def is_sub_sequence1(s, t):
         t = t[index + 1:]
     return True
 
-
 # Method 2
 def is_sub_sequence2(s, t):
     t = iter(t)
