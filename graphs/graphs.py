@@ -77,14 +77,3 @@ class Graph:
                 for np in new_paths:
                     paths.append(np)
         return paths
-
-
-
-
-# Given edges check if there is a cycle
-
-# Check if graph is bi-partite -- Graph Theory
-
-# Check if graph is a Tree?
-
-# Directed graph tricks

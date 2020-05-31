@@ -1,12 +1,13 @@
 import heapq
 
 # Print on the same line with space as seperator
+val = "Hello World"
 print(val, end="")
 
 # Getting the top 'n' smallest or largest
 marks = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 top_three_largest = heapq.nlargest(3, marks)
-top_three_smallest = heapq.nsmallest((3, marks))
+top_three_smallest = heapq.nsmallest(3, marks)
 
 # Using the all() function in python
 samples = [5, 6, 7, 8]
@@ -28,3 +29,7 @@ addition(4, 5)
 # Writing if - else in one-line
 y = 20
 x = 5 if y > 10 else 25
+
+str = "Hello"
+if "le" in str:
+    print("Awesome")
