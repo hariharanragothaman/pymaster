@@ -5,6 +5,23 @@ There are totally 4 recipes for binary search
 3.
 4. Using bisect
 """
+# TEMPLATE #1: Usual approach
+def binary_search_gen(array, target):
+    if len(nums) == 0:
+        return -1
+
+    left, right = 0, len(nums)-1
+    while left <= right:
+        mid = (left + right) // 2
+        if array[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+
 
 # TEMPLATE #4 - Bisect and its advantages
 
