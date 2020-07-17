@@ -4,7 +4,7 @@ from functools import reduce
 # GCD and LCM of b/w 2 numbers
 def gcd(a, b):
     while b != 0:
-        a, b = a % b
+        a, b = b, a % b
     return a
 
 
@@ -24,6 +24,9 @@ matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 matrix[:] = zip(*matrix)  # Getting Transpose [ R->C, C->R ]
 matrix[:] = zip(*matrix[::-1])  # Rotate a matrix - Transpose & reverse each row
 
+def spiral_matrix(matrix):
+    # Basically - pop the first row, and take transpose
+    matrix[:] = matrix and spiral_matrix(*(matrix.pop(0)) + (*zip(matrix)[::-1]) )
 
 # To get the rows of the matrix:
 def get_rows(matrice):
@@ -33,6 +36,17 @@ def get_rows(matrice):
 def get_columns(matrice):
     return zip(*matrice)
 
+# All diagonal elements have common difference between (i and j)
+# Getting all all teh diagonal elements
+d = collections.defaultdict(list)
+for i in range(n):
+    for j in range(m):
+        d[i - j].append(A[i][j])
+
+# Putting them back
+for i in range(n):
+    for j in range(m):
+        A[i][j] = d[i - j].pop()
 
 # Reversing an integer
 def reverse_integer(num):
@@ -52,3 +66,13 @@ def reverse_integer(num):
         return 0
 
     return result * sign
+
+# To get the neighbours of a matrix element
+def neighbours(r, c):
+    for rows, cols in ((r - 1, c),
+                       (r, c - 1),
+                       (r + 1, c),
+                       (r, c + 1)
+                       ):
+        if 0 <= rows < R and 0 <= cols < C:
+            yield rows, cols

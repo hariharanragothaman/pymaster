@@ -7,6 +7,7 @@ print(val, end="")
 # Getting the top 'n' smallest or largest
 marks = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 top_three_largest = heapq.nlargest(3, marks)
+print(top_three_largest)
 top_three_smallest = heapq.nsmallest(3, marks)
 
 # Using the all() function in python

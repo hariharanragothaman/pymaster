@@ -5,6 +5,16 @@ hash_map = {}
 hash_map = {k: v for k, v in sorted(hash_map.items(), key=lambda item: item[1])}   # by value
 hash_map = {k: v for k, v in sorted(hash_map.items(), key=lambda item: item[0])}   # by key
 
+# Classic example of sort by value and then by key
+# Here -ve sign signifies that you want to order values in reverse - 1st priority
+# then the key - which is second priority
+class Solution:
+    def topKFrequentWords(self, words: List[str], k: int) -> List[str]:
+        ctr = Counter(words)
+        result = sorted(ctr, key=lambda x:(-ctr[x], x))
+        return result[:k]
+
+
 # To sort by value and then by key
 # Creates a tuple that are by default sorted by value, and then we set the priority
 ctr = {}
