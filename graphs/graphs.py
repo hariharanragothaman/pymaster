@@ -29,8 +29,6 @@ class Graph:
             result_path.append(vertex)
         return result_path
 
-    def DFS(self, start):
-
     # General strategy for DFS - Works for undirected graph
     def DFS(self, start):
         visited = {}
