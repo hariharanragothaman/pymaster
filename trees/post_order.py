@@ -1,7 +1,9 @@
 '''
 Time complexity : O(n)
-'''
 
+Note: This is heavily used when you want to traverse from the bottom - Remember this.
+
+'''
 class Node:
 
     def __init__(self, val, left=None, right=None):
