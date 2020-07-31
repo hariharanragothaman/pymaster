@@ -1,7 +1,6 @@
 """
 Standard recipe to find the lowest common ancestor
 """
-
 def lca(self, root, a, b):
     # Standard Recipe to find the lowest-common ancestor
     if root is None or root is a or root is b:
