@@ -14,13 +14,11 @@ def is_sub_sequence2(s, t):
     t = iter(t)
     return all(c in t for c in s)
 
-
 # To generate all possible sub-strings - brute-force
 strs = "Success"
 for i in range(len(strs)):
     for j in range(i + 1, len(strs) + 1):
         print(strs[i:j])
-
 
 # Longest Common Substring - given 2 strings
 from difflib import SequenceMatcher
@@ -29,6 +27,3 @@ def find_length(A, B):
         return 0
     a, b, size = SequenceMatcher(None, A, B, autojunk=False).find_longest_match(0, len(A), 0, len(B))
     return size
-
-s = "abc"
-s.
