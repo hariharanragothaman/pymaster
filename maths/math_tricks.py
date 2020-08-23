@@ -76,3 +76,15 @@ def neighbours(r, c):
                        ):
         if 0 <= rows < R and 0 <= cols < C:
             yield rows, cols
+
+
+# Another way to write directions is:
+i, j = 0, 0  # Assuming this is the start position
+dirs = ((0,1),(0,-1),(1,0),(-1,0))
+for x, y in dirs:
+    row = i + x
+    cols = j + y
+
+# using reduce to find gcd for all multiple numbers at the same time. - you can also pass lambda to it.
+from amth import gcd
+reduce(gcd, [2, 4, 8], 3)
