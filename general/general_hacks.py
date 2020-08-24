@@ -34,3 +34,6 @@ x = 5 if y > 10 else 25
 str = "Hello"
 if "le" in str:
     print("Awesome")
+
+a = True and 6.2
+print(a)
