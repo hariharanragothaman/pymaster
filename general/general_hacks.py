@@ -4,6 +4,11 @@ import heapq
 val = "Hello World"
 print(val, end="")
 
+# given n numbers how many pairs can you generate - nC2 - n(n-1) /2
+
+# Read till end of file
+input_str = sys.stdin.read().split()
+
 # Getting the top 'n' smallest or largest
 marks = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 top_three_largest = heapq.nlargest(3, marks)
@@ -37,3 +42,8 @@ if "le" in str:
 
 a = True and 6.2
 print(a)
+
+## Nicer way to generate consecutive combinations in an array
+arr = [1, 2, 3, 4, 5]
+for x, y in zip(arr, arr[1:]):
+    print(x, y)
