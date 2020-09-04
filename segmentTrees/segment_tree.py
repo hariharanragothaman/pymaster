@@ -18,4 +18,5 @@ Another solution is:
 > Updating takes O(n) now.
 
 How can we perform both operations in O(logn) time?
+
 """
