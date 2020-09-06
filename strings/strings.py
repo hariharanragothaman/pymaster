@@ -27,3 +27,13 @@ def find_length(A, B):
         return 0
     a, b, size = SequenceMatcher(None, A, B, autojunk=False).find_longest_match(0, len(A), 0, len(B))
     return size
+
+def longest_increasing_subsequence():
+    temp = []
+    for n in arr:
+        index = bisect.bisect_left(temp, n)
+        if index == len(temp):
+            temp.append(n)
+        else:
+            temp[index] = n
+    return temp

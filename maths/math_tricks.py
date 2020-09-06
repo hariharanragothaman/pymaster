@@ -86,5 +86,5 @@ for x, y in dirs:
     cols = j + y
 
 # using reduce to find gcd for all multiple numbers at the same time. - you can also pass lambda to it.
-from amth import gcd
+from math import gcd
 reduce(gcd, [2, 4, 8], 3)
