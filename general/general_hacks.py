@@ -19,14 +19,6 @@ top_three_smallest = heapq.nsmallest(3, marks)
 samples = [5, 6, 7, 8]
 check = all(c for c in samples if c > 5)
 
-# Flatten a list of lists
-list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-flat_list = [item for sublist in list1 for item in sublist]
-
-# Let's say we have 2 tuples - we need to convert it into a hashmap
-t1 = (1, 2, 3)
-t2 = (4, 5, 6)
-mapping = dict(zip(t1, t2))
 
 # Basic example of Lambda
 addition = lambda x, y : x + y
@@ -42,8 +34,3 @@ if "le" in str:
 
 a = True and 6.2
 print(a)
-
-## Nicer way to generate consecutive combinations in an array
-arr = [1, 2, 3, 4, 5]
-for x, y in zip(arr, arr[1:]):
-    print(x, y)
