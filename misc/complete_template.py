@@ -69,22 +69,17 @@ def binNumber(n, size=4):
 def iar():
     return list(map(int, input().split()))
 
-
 def ini():
     return int(input())
-
 
 def isp():
     return map(int, input().split())
 
-
 def sti():
     return str(input())
 
-
 def par(a):
     print(' '.join(list(map(str, a))))
-
 
 def tdl(outerListSize, innerListSize, defaultValue=0):
     return [[defaultValue] * innerListSize for i in range(outerListSize)]
@@ -94,7 +89,6 @@ def sts(s):
     s = list(s)
     s.sort()
     return ''.join(s)
-
 
 def bis(a, x):
     i = bisect_left(a, x)
@@ -113,11 +107,11 @@ class pair:
         return (self.fi, self.se) < (other.fi, other.se)
 
 
-
 # ACTUAL CODE after getting Input is here
 def main():
     input = lambda: sys.stdin.readline().rstrip("\r\n")
-    pass
+    values = input().split()
+    print(*values)
 
 
 if __name__ == '__main__':
