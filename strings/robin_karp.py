@@ -1,10 +1,8 @@
 """
 To find the first occurrence of substring ~ using Robin Karp
-
 Solution Approach:
 
 """
-
 from functools import reduce
 
 def robin_karp(s, t):
@@ -16,8 +14,7 @@ def robin_karp(s, t):
     # Base hash codes computing for 's' and 't'
     t_hash = reduce(lambda h, c: h * base + ord(c), t [:len(s)], 0)
     s_hash = reduce(lambda h, c: h * base + ord(c), s, 0)
-
-    power_s = base *** max(len(s)-1, 0) # base ^ |s-1|
+    power_s = base ** max(len(s)-1, 0) # base ^ |s-1|
 
     for i in range(len(s), len(t)):
 
