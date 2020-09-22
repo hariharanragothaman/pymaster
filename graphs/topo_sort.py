@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 def topo_sort_variant(graph, n):
+    # Returns a topologically sorted graph
     res = []
     visited = [False] * (n + 1)
 
