@@ -2,7 +2,6 @@
 Given an AP, find the missing number in AP
 """
 
-
 def missing_number_ap(arr):
     # Sum of AP is - (first + last) * (n+1) / 2
     s = (arr[0] + arr[-1]) * (len(arr) + 1) // 2
