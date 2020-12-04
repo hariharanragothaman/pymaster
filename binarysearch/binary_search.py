@@ -58,6 +58,7 @@ def binary_search_new(nums, target):
 
 
 # TEMPLATE #4 - Bisect and its advantages
+# Binary search recipe using bisect
 
 from bisect import bisect_left
 def binary_search(array, val):
@@ -69,7 +70,7 @@ def binary_search(array, val):
 
 
 if __name__ == '__main__':
-    arr = [1, 2, 4, 4, 5, 6, 7]
+    arr = [2, 4, 5, 8, 10]
     value = 4
-    res = binary_search(arr, 7)
+    res = binary_search(arr, 1)
     print(res)
