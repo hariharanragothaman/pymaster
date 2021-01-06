@@ -35,7 +35,7 @@ for x, y in dirs:
 
 # *****************************
 # All diagonal elements have common difference between (i and j)
-# Getting all all teh diagonal elements
+# Getting all all the diagonal elements
 d = collections.defaultdict(list)
 for i in range(n):
     for j in range(m):
