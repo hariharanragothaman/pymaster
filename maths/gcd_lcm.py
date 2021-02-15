@@ -1,4 +1,7 @@
 # GCD and LCM of b/w 2 numbers
+from functools import reduce
+
+
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
