@@ -15,4 +15,10 @@ Note - Here f(x) can be any function - for quick understanding we can have it as
 
 
 class FenwickTree:
-
+    def __init__(self, x):
+        """ Transform list into BIT"""
+        self.bit = x
+        for i in range(len(x)):
+            j = i | (i + 1)
+            if j < len(x):
+                x[j] += x[i]

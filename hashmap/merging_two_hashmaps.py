@@ -1,21 +1,4 @@
-def test_merge_hmaps():
-    a = {
-        'a': 1,
-        'b': {
-            'b1': 2,
-            'b2': 3,
-        },
-    }
 
-    b = {
-        'a': 1,
-        'b': {
-            'b1': 4,
-        },
-    }
-    assert merge_hmaps(a, b)['a'] == 1
-    assert merge_hmaps(a, b)['b']['b2'] == 3
-    assert merge_hmaps(a, b)['b']['b1'] == 4
 
 
 import collections
@@ -56,9 +39,32 @@ def merge_hmaps(dct, merge_dct, add_keys=True):
             dct[k] = merge_hmaps(dct[k], merge_dct[k], add_keys=add_keys)
         else:
             dct[k] = merge_dct[k]
-
+    print(" I am going to return?", dct)
     return dct
 
+def test_merge_hmaps():
+    a = {
+        'a': 1,
+        'b': {
+            'b1': 8,
+            'b2': 3},
+    }
+
+    b = {
+        'a': 1,
+        'b': {
+            'b1': [4, 5, 7],
+            'b4': 5,
+        },
+    }
+    """
+    assert merge_hmaps(a, b)['a'] == 1
+    assert merge_hmaps(a, b)['b']['b2'] == 3
+    assert merge_hmaps(a, b)['b']['b1'] == 4
+    """
+    print("------------After merging -------------")
+    res = merge_hmaps(a, b, add_keys=True)
+    print("The merged hashmap is:", res)
 
 if __name__ == '__main__':
     test_merge_hmaps()
