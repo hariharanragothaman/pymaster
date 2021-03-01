@@ -16,7 +16,7 @@ Note - Here f(x) can be any function - for quick understanding we can have it as
 
 class FenwickTree:
     def __init__(self, x):
-        """ Transform list into BIT"""
+        """ Transform list into Binary Indexed Tree"""
         self.bit = x
         for i in range(len(x)):
             j = i | (i + 1)

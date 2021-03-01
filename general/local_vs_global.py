@@ -1,3 +1,7 @@
+"""
+Functionality between local vs global
+"""
+
 # Case 1: nolocal is used when we need to access a variable in a nested function
 
 def func1():

@@ -1,3 +1,6 @@
+"""
+Some general hacks
+"""
 import heapq
 
 # Print on the same line with space as seperator
