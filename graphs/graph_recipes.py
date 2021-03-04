@@ -1,4 +1,7 @@
-# Fundamental templates for Graphs
+"""
+Templates for Graphs
+"""
+
 from collections import defaultdict, deque
 
 class Graph:
@@ -6,12 +9,11 @@ class Graph:
         self.graph = defaultdict(list)
 
     def add_edge(self, node, neighbour):
+        #self.graph[node].append(neighbour)
         self.graph[node].append(neighbour)
-        """
-        In terms of an un-directed graph - we would do:
-        self.graph[node].append(neighbour)
-        self.graph[neighbour].append(node)
-        """
+        self.graph[neighbour].append(node) 
+
+
     # General strategy for BFS  - Works for undirected-graph
     def BFS(self, start):
         visited = {}

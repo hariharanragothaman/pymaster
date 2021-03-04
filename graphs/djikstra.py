@@ -27,21 +27,21 @@ def dijkstra(n, graph, start):
     return distance_map, parents_map
 
 
-# Initial I/P
-inp = [[2, 1, 1], [2, 3, 1], [3, 4, 1]]
-n = 4
-start = 2
+if __name__ == '__main__':
+    # Initial I/P
+    inp = [[2, 1, 1], [2, 3, 1], [3, 4, 1]]
+    n = 4
+    start = 2
 
-# Build the graph:
-graph = defaultdict(list)
+    # Build the graph:
+    graph = defaultdict(list)
 
-for v in inp:
-    source, target, weight = v[0], v[1], v[2]
-    graph[source].append((target, weight))
-print("The initial graph is:", graph)  # Perfect understanding
+    for v in inp:
+        source, target, weight = v[0], v[1], v[2]
+        graph[source].append((target, weight))
+    print("The initial graph is:", graph)  # Perfect understanding
 
-dist_map, parents_map = dijkstra(n, graph, start)
-
-print("The graph is", graph)
-print("The final distance_map is:", dist_map)
-print("The final parents map is:", parents_map)
+    dist_map, parents_map = dijkstra(n, graph, start)
+    print("The graph is", graph)
+    print("The final distance_map is:", dist_map)
+    print("The final parents map is:", parents_map)

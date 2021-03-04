@@ -24,9 +24,7 @@ if __name__ == '__main__':
     min_roads_required = 0
     # Cities are vertexes and roads are the edges
     ncities, nroads  = map(int, input().split())
-
     g = defaultdict(list)
-
     for i in range(nroads):
         u, v = map(int, input().split())
         g[u].append(v)
