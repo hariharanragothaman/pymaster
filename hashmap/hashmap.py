@@ -31,3 +31,7 @@ d['python'].append("awesome")     # No-need to check if key exists
 d['something-else'].append("not relevant")
 d['python'].append("language")
 print(d)
+
+# Setdefault feature
+hmap = {}
+

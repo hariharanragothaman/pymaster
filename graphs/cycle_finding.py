@@ -55,6 +55,7 @@ def contains_cycle(graph):
 
 # -----------------------------------------------------------------------------------------
 
+
 if __name__ == '__main__':
     print(contains_cycle(graph_with_cycle))
     print(contains_cycle(graph_without_cycle))
