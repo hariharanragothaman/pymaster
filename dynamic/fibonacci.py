@@ -59,5 +59,17 @@ def fibonacci_top_down_3(n):
     return fibonacci_top_down_3(n-1) + fibonacci_top_down_3(n-2)
 
 
+# Approach DP2 in Python
+def fibonacci_bottom_up(n):
+    cache = [1, 1]
+    while len(cache) < n:
+        cache.append(cache[-1] + cache[-2])
+    return cache[-1]
+
+
+
+
+
+
 if __name__ == '__main__':
     fibonacci_bruteforce(6)
