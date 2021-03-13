@@ -67,9 +67,5 @@ def fibonacci_bottom_up(n):
     return cache[-1]
 
 
-
-
-
-
 if __name__ == '__main__':
     fibonacci_bruteforce(6)
