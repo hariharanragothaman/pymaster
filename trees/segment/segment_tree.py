@@ -64,7 +64,7 @@ class SegmentTree:
 
 if __name__ == '__main__':
     arr = [5, 8, 6, 3, 2, 7, 2, 6]
-    seg_obj = SegmentTree(arr, min)
+    seg_obj = SegmentTree(arr, max)
     print(seg_obj.tree)
     result = seg_obj.query(2, 7)
     print("The result is: ", result)
