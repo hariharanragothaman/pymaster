@@ -125,6 +125,7 @@ index = n
 
 from typing import List
 
+
 class Fenwick:
     def __init__(self, nums: List[int]):
         self.nums = nums

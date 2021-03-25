@@ -1,3 +1,6 @@
+import itertools
+import collections
+
 # 2D matrices Hacks
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
@@ -36,6 +39,8 @@ for x, y in dirs:
 # *****************************
 # All diagonal elements have common difference between (i and j)
 # Getting all all the diagonal elements
+A = [[1, 2, 3], [4, 5 ,6], [7, 8, 9]]
+n, m = 3, 3
 d = collections.defaultdict(list)
 for i in range(n):
     for j in range(m):
@@ -47,3 +52,9 @@ for i in range(n):
         A[i][j] = d[i - j].pop()
 
 # *******************************
+
+# zipping unequal lists
+a = [1, 2, 3]
+b = [4, 5]
+c = list(itertools.zip_longest(a, b, fillvalue=0))
+print(c)
