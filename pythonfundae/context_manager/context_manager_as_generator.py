@@ -9,5 +9,5 @@ def open_file(filename, mode):
     finally:
         f.close()
 
-with open_file('test.txt', 'r') as f:
+with open_file('../misc/test.txt', 'r') as f:
     print(f.read())

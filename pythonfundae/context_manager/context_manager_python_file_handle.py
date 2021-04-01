@@ -19,6 +19,6 @@ class OpenFile:
             self.file_handler.close()
         return
 
-with OpenFile('test.txt', 'r') as f:
+with OpenFile('../misc/test.txt', 'r') as f:
     print("Reading a file")
     print(f.read())
