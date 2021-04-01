@@ -5,7 +5,6 @@ class Trie:
             self.add(word)
 
     def add(self, word):
-        print("The word is:", word)
         current_dict = self.root
         for letter in word:
             current_dict = current_dict.setdefault(letter, dict())
@@ -27,7 +26,6 @@ class Trie:
             nodes.append(current_dict)
         del current_dict["_end_"]
 
-    # __contains__ takes care of this logic, just adding this
     def starts_with(self, prefix):
         current_dict = self.root
         for letter in prefix:
@@ -41,7 +39,7 @@ if __name__ == '__main__':
     words = ["hello", "world", "wow"]
     t = Trie(*words)
     print(t.root)
-    res = t.__contains__('wow')
+    res = t.__contains__('world')
     print(res)
     res = t.starts_with('worl')
     print(res)
