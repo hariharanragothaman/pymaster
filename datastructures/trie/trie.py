@@ -27,6 +27,7 @@ class Trie:
             nodes.append(current_dict)
         del current_dict["_end_"]
 
+    # __contains__ takes care of this logic, just adding this
     def starts_with(self, prefix):
         current_dict = self.root
         for letter in prefix:
