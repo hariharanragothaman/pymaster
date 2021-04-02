@@ -1,3 +1,4 @@
+from typing import List
 from collections import Counter, deque, defaultdict, OrderedDict
 
 # Pattern to sort a hash-map by key or value
@@ -43,4 +44,3 @@ def can_convert(s1, s2):
         if dp.setdefault(i, j) != j:
             return False
     return len(set(s2)) < 26
-
