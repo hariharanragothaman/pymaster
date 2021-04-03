@@ -1,12 +1,6 @@
 
 from collections import defaultdict
 
-edges = [[4,3,1],[3,2,4],[3],[4],[]]
-graph = defaultdict(list)
-for i, e in enumerate(edges):
-    for d in e:
-        graph[i].append(d)
-
 
 def find_all_paths(start, end, path=[]):
     """
@@ -25,5 +19,15 @@ def find_all_paths(start, end, path=[]):
                 all_paths.append(np)
     return all_paths
 
-paths = find_all_paths(0, 4)
-print("All paths are", paths)
+
+if __name__ == '__main__':
+    edges = [[4, 3, 1], [3, 2, 4], [3], [4], []]
+    graph = defaultdict(list)
+    for i, e in enumerate(edges):
+        for d in e:
+            graph[i].append(d)
+
+    print("The graph is:", graph)
+
+    paths = find_all_paths(0, 4)
+    print("All paths are", paths)
