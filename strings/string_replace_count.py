@@ -1,5 +1,5 @@
 """
-This is just an example for replacing only for a specifc count
+This is just an example for replacing only for a specific count
 Reference Problem
 
 You are given a string s consisting of n lowercase Latin letters. Polycarp wants to remove exactly k characters (k≤n) from the string s.
