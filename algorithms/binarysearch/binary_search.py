@@ -1,3 +1,17 @@
+"""
+# Smarter Template for getting the middle value
+
+def binary_search_smart():
+    left, right = 0, 10**18
+    condition = <>
+    while left < right:
+        mid = left + right + 1 >> 1
+        if condition:
+            left = mid
+        else:
+            right = mid - 1
+"""
+
 
 # TEMPLATE #1: Usual approach
 def binary_search_gen(array, target):
