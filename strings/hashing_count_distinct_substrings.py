@@ -20,25 +20,24 @@ def count_distinct_substrings(s):
 
     count = 0
     n = len(s)
-    tmp = 0
-
     for length in range(1, n+1):
 
         result_set = set()
 
         for i in range(0, n-length+1):
-            #string = s[i:i+length]
+            string = s[i:i+length]
+            #print("The value of length ",length, i)
             #print("The string is:", string)
             current_hash = (hash_values[i+length] + m - hash_values[i]) % m
             current_hash = (current_hash * power_mod[n-i-length]) % m
             result_set.add(current_hash)
 
-        #print(f"The result is: {result_set}")
+        print(f"The result is: {result_set}")
         count += len(result_set)
     print("The number of unique substrings is:", count)
     return count
 
 
 if __name__ == '__main__':
-    s = 'abc'
+    s = 'Success'
     count_distinct_substrings(s)

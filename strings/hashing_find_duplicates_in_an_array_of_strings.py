@@ -29,6 +29,7 @@ def group_identical_strings(arr: List[str]):
     for h in hashes:
         result_groups[h[0]].append(h[1])
 
+    print("The map is:", result_groups)
     print("The result groups are:", result_groups.values())
 
 
