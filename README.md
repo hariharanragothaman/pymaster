@@ -21,6 +21,7 @@
   - [Find Path b/w Source & Target - Single Parent](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/find_path_between_two_vertices_single_parent.py)
   - [Find minimum vertices to reach all nodes](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/minimum_vertices_to_reach_all_nodes_dag.py)
   - [Topological Sort](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/topological_sort.py)
+  - [BFS & DFS](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/graph_recipes_bfs_dfs.py)
 </details>
 
 <details>
