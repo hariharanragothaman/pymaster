@@ -73,6 +73,7 @@
   <summary>Python Stuff</summary>
 
   - [Decorators Basics](https://github.com/hariharanragothaman/pymaster/blob/master/pyfundae/decorators_funda.py)
+  - [Itertools - Useful tricks](https://github.com/hariharanragothaman/pymaster/blob/master/pyfundae/itertools/iter_intro.py)
 </details>
 
 <details>
