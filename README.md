@@ -6,7 +6,13 @@
 <details>
   <summary>Data Structures</summary>
 
-  - [Array Flattening](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/arrays/flatten.py)
+  - [Array: Flattening](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/arrays/flatten.py)
+  - [Array: Consecutive Combo](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/arrays/consecutive_combos.py)
+  - [Array: Continuous Subsegment Counts](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/arrays/find_continuous_subsegment_counts.py)
+  - [Hashmap: Merging Hashmaps](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/hashmap/merging_two_hashmaps.py)
+  - [Hashmap: Sort](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/hashmap/sort_hashmap.py)
+  - [Hashmap: Tuple to Hashmap](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/hashmap/tuple_to_hashmap.py)
+  - [Hashmap: Generic Stuff](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/hashmap/hashmap.py)
 </details>
 
 <details>
