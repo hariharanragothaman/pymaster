@@ -1,5 +1,5 @@
 # pymaster
-Quick Recipes for Interview Problems
+### Quick Recipes for Interview Problems
 
 
 ### Snippets
