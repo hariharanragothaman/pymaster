@@ -40,13 +40,14 @@
   <summary>Strings</summary>
 
   - [Check if s is subsequence of t](https://github.com/hariharanragothaman/pymaster/blob/master/strings/is_subsequence.py)
-  - [Find duplicates in a list of strings using Hashing](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing_find_duplicates_in_an_array_of_strings.py)
   - [Generate all substrings O(n^2)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/generate_all_substrings.py)
   - [Hashing (Rolling Hash)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing.py)
   - [KMP](https://github.com/hariharanragothaman/pymaster/blob/master/strings/kmp.py)
   - [Longest Common Substring (LCS)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/longest_common_substring.py)
   - [Longest Increasing Subsequence (LIS)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/longest_increasing_subsequence.py)
   - [Rabin Karp](https://github.com/hariharanragothaman/pymaster/blob/master/strings/rabin_karp.py)
+  - [Rolling Hash - Find duplicates in a list of strings](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing_find_duplicates_in_an_array_of_strings.py)
+  - [Rolling Hash - Count distinct substrings in a string](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing_count_distinct_substrings.py)
 </details>
 
 <details>
