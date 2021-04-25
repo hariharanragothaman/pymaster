@@ -25,6 +25,12 @@ Quick Recipes for Interview Problems
   <summary>Maths</summary>
 
   - [Prime Check](https://github.com/hariharanragothaman/pymaster/blob/master/maths/check_prime.py)
+  - [Get Factors](https://github.com/hariharanragothaman/pymaster/blob/master/maths/factors.py)
+  - [Bitwise Tricks](https://github.com/hariharanragothaman/pymaster/blob/master/maths/generic_math_tricks.py)
+  - [Reverse Integer](https://github.com/hariharanragothaman/pymaster/blob/master/maths/reverse_integer.py)
+  - [GCD & LCM](https://github.com/hariharanragothaman/pymaster/blob/master/maths/gcd_lcm.py)
+  - [2D Matrices Tricks](https://github.com/hariharanragothaman/pymaster/blob/master/maths/matrices_tricks.py)
+  - [Combinatorics](https://github.com/hariharanragothaman/pymaster/blob/master/maths/combinatorics.py)
 </details>
 
 <details>
