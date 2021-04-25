@@ -79,4 +79,5 @@
   <summary>Miscellaneous</summary>
 
   - [FastIO](https://github.com/hariharanragothaman/pymaster/blob/master/misc/FastIO.py)
+  - [Get Stack Depth](https://github.com/hariharanragothaman/pymaster/blob/master/misc/get_stack_depth.py)
 </details>
