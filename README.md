@@ -39,7 +39,11 @@
 <details>
   <summary>Strings</summary>
 
+  - [Check if s is subsequence of t](https://github.com/hariharanragothaman/pymaster/blob/master/strings/is_subsequence.py)
+  - [Generate all substrings O(n^2)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/generate_all_substrings.py)
   - [Hashing](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing.py)
+  - [KMP](https://github.com/hariharanragothaman/pymaster/blob/master/strings/kmp.py)
+  - [Rabin Karp](https://github.com/hariharanragothaman/pymaster/blob/master/strings/rabin_karp.py)
 </details>
 
 <details>
