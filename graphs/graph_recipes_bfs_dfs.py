@@ -4,12 +4,12 @@ Templates for Graphs
 
 from collections import defaultdict, deque
 
+
 class Graph:
     def __init__(self):
         self.graph = defaultdict(list)
 
     def add_edge(self, node, neighbour):
-        #self.graph[node].append(neighbour)
         self.graph[node].append(neighbour)
         self.graph[neighbour].append(node) 
 
@@ -43,7 +43,7 @@ class Graph:
 
         q= deque(start)
         while q:
-            vertex = q.popleft()
+            vertex = q.pop()
             for neighbours in self.graph[vertex]:
                 if visited[neighbours] is False:
                     stack.append(neighbours)
