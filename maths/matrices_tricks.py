@@ -19,7 +19,7 @@ def get_columns(matrice):
     return zip(*matrice)
 
 # To get the neighbours of a matrix element
-def neighbours(r, c):
+def neighbours(r, c, R, C):
     for rows, cols in ((r - 1, c),
                        (r, c - 1),
                        (r + 1, c),
