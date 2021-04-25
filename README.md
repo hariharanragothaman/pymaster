@@ -13,6 +13,12 @@
   <summary>Graphs</summary>
 
   - [Check Bi-Partite](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/check_bipartite.py)
+  - [Check if Cycle Exists](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/check_cycle.py)
+  - [Check Cycle without recursion - Brent's Algorithm](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/check_cycle_without_recursion.py)
+  - [Check if we can visit all nodes (DFS)](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/check_if_we_can_visit_all_nodes.py)
+  - [Djikstra (Using Heap)](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/djikstra.py)
+  - [Find Shortest Path from Source to Target](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/find_shortest_path_from_source_to_target.py)
+  - [Find Path b/w Source & Target - Single Parent](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/find_path_between_two_vertices_single_parent.py)
 </details>
 
 <details>
