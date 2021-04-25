@@ -53,8 +53,14 @@ for i in range(n):
 
 # *******************************
 
-# zipping unequal lists
-a = [1, 2, 3]
-b = [4, 5]
-c = list(itertools.zip_longest(a, b, fillvalue=0))
-print(c)
+
+# Getting the diagnoals
+rows = len(matrix)
+hashmap = {}
+# Storing the left diagonals in a hashmap
+for i in range(rows):
+    hashmap[(i, i)] = matrix[i][i]
+
+# Storing the right diagonals in a hashmap
+for i in range(rows):
+    hashmap[(rows - 1 - i, i)] = matrix[rows - 1 - i][i]
