@@ -18,7 +18,6 @@ class Graph:
             visited[str(k)] = False
         print(f"The initial visited is: {visited}")
 
-
         q = deque(start)
         visited[start] = True
 
