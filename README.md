@@ -40,7 +40,7 @@ Quick Recipes for Interview Problems
 </details>
 
 <details>
-  <summary>Miscellaneouso</summary>
+  <summary>Miscellaneous</summary>
 
   - [FastIO](https://github.com/hariharanragothaman/pymaster/blob/master/misc/FastIO.py)
 </details>
