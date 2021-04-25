@@ -43,6 +43,7 @@
   - [Generate all substrings O(n^2)](https://github.com/hariharanragothaman/pymaster/blob/master/strings/generate_all_substrings.py)
   - [Hashing](https://github.com/hariharanragothaman/pymaster/blob/master/strings/hashing.py)
   - [KMP](https://github.com/hariharanragothaman/pymaster/blob/master/strings/kmp.py)
+  - [Longest Common Substring](https://github.com/hariharanragothaman/pymaster/blob/master/strings/longest_common_substring.py)
   - [Rabin Karp](https://github.com/hariharanragothaman/pymaster/blob/master/strings/rabin_karp.py)
 </details>
 
