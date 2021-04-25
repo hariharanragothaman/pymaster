@@ -19,6 +19,8 @@
   - [Djikstra (Using Heap)](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/djikstra.py)
   - [Find Shortest Path from Source to Target](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/find_shortest_path_from_source_to_target.py)
   - [Find Path b/w Source & Target - Single Parent](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/find_path_between_two_vertices_single_parent.py)
+  - [Find minimum vertices to reach all nodes](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/minimum_vertices_to_reach_all_nodes_dag.py)
+  - [Topological Sort](https://github.com/hariharanragothaman/pymaster/blob/master/graphs/topological_sort.py)
 </details>
 
 <details>
