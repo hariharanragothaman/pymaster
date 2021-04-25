@@ -27,7 +27,7 @@ def count_distinct_substrings(s):
         for i in range(0, n-length+1):
             string = s[i:i+length]
             #print("The value of length ",length, i)
-            #print("The string is:", string)
+            print("The string is:", string)
             current_hash = (hash_values[i+length] + m - hash_values[i]) % m
             current_hash = (current_hash * power_mod[n-i-length]) % m
             result_set.add(current_hash)

@@ -57,5 +57,8 @@ def contains_cycle(graph):
 
 
 if __name__ == '__main__':
+    graph = {1: [8, 12], 8: [1], 12: [1]}
+    res = contains_cycle(graph)
+    print(res)
     print(contains_cycle(graph_with_cycle))
     print(contains_cycle(graph_without_cycle))

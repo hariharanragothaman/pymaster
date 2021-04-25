@@ -5,10 +5,20 @@ class Trie:
             self.add(word)
 
     def add(self, word):
+        # Check if word exists:
+        current_dict = self.root
+
+        if self.__contains__(word):
+            for letter in word:
+                current_dict = current_dict[letter]
+            current_dict["_cnt_"] += 1
+            return
+
         current_dict = self.root
         for letter in word:
             current_dict = current_dict.setdefault(letter, dict())
         current_dict["_end_"] = True
+        current_dict["_cnt_"] = 1
 
     def __contains__(self, word):
         """
@@ -41,10 +51,18 @@ class Trie:
             current_dict = current_dict[letter]
         return True
 
+    def count_words_equal_to(self, word: str) -> int:
+        current_dict = self.root
+        for letter in word:
+            if letter not in current_dict:
+                return 0
+            current_dict = current_dict[letter]
+        return current_dict["_cnt_"]
+
 if __name__ == '__main__':
-    words = ["hello", "world", "wow", "delete"]
+    words = ["hello", "world", "wow", "delete", "dell", "hello"]
     t = Trie(*words)
-    print(t.root)
+    print("Printing the trie", t.root)
 
     # Checking for basic contains
     res = t.__contains__('world')
@@ -63,3 +81,6 @@ if __name__ == '__main__':
     res = t.__contains__('delete')
     print(res)
     print(t.root)
+
+    val = t.count_words_equal_to("hello")
+    print("The count is:", val)

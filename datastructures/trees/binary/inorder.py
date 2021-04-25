@@ -3,7 +3,6 @@ Common recipes in Trees
 """
 def inorder(node: TreeNode) -> Iterator[int]:
     stack = []
-
     while node or stack:
         while node:
             stack.append(node)
