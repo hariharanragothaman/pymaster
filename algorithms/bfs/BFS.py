@@ -34,13 +34,3 @@ class Tree:
                     q.append(node.right)
             level += 1
         return traverse
-
-# Given a 2D matrix - Find neighbours
-def neighbours(r, c):
-    for rows, cols in ((r - 1, c),
-                       (r, c - 1),
-                       (r + 1, c),
-                       (r, c + 1)
-                      ):
-        if 0 <= rows < R and 0 <= cols < C:
-            yield rows, cols

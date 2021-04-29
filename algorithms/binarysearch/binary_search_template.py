@@ -5,6 +5,8 @@ Usually it's sorted in ascend order.
 For most tasks, we can transform the requirement into the following generalized form:
 """
 
+from typing import List
+
 def binary_search(array) -> int:
     def condition(value) -> bool:
         pass
@@ -38,6 +40,7 @@ Since each version is developed based on the previous version, all the versions 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad. 
 You are given an API bool isBadVersion(version) which will return whether version is bad.
 """
+
 
 def firstBadVersion(self, n):
     """
@@ -86,7 +89,7 @@ This is why I mentioned earlier that we need to decide which value to return, le
 Given a sorted array of distinct integers and a target value, return the index if the target is found.
 If not, return the index where it would be if it were inserted in order.
 """
-def searchInsert(self, nums: List[int], target: int) -> int:
+def searchInsert(nums: List[int], target: int) -> int:
     left, right = 0, len(nums)
     while left < right:
         mid = left + (right - left ) // 2
