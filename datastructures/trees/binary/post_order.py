@@ -1,15 +1,17 @@
-'''
+"""
 Time complexity : O(n)
 
 Note: This is heavily used when you want to traverse from the bottom - Remember this.
 
-'''
-class Node:
+"""
 
+
+class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
+
 
 def postorder(root):
     res_temp = []
@@ -28,6 +30,7 @@ def postorder(root):
     while res_temp:
         res.append(res_temp.pop())
     return res
+
 
 # Recursive Implementation
 def postorder_rec(root, res=None):

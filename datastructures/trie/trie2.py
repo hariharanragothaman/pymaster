@@ -2,6 +2,7 @@ class PrefixTree:
     """
     This class implements the Trie DataStructure also called as PrefixTree
     """
+
     def __init__(self, letter=None):
         self.letter = letter
         self.children = {}

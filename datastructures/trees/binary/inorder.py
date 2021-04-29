@@ -4,6 +4,7 @@ Common recipes in Trees
 
 from typing import Iterator
 
+
 class TreeNode:
     def __init__(self, value, left=None, right=None):
         self.val = value

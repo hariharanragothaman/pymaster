@@ -3,10 +3,12 @@ Fundamental Template for LinkedList
 """
 # General Definition of a node
 
+
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
 
 class LinkedList:
     def __init__(self):
@@ -93,7 +95,7 @@ class LinkedList:
         return self.head
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s1 = ListNode(5)
     s2 = ListNode(6)
     s3 = ListNode(7)

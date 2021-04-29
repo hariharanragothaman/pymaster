@@ -24,5 +24,6 @@ def tail(filename, n=10):
     with open(filename) as f:
         return deque(f, n)
 
+
 # Another approach to using deque is to maintain a sequence of recently added elements
 # By appending to the right and popping from the left - Transforms into fixed sliding window

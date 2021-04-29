@@ -21,6 +21,7 @@ How can we perform both operations in O(logn) time?
 
 """
 
+
 class SegmentTree:
     def __init__(self, arr, function):
         self.tree = [None for _ in range(len(arr))] + arr
@@ -58,11 +59,10 @@ class SegmentTree:
 
         while start <= stop:
             if start % 2 == 1:
-                result += self.tree[start+1]
+                result += self.tree[start + 1]
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [5, 8, 6, 3, 2, 7, 2, 6]
     seg_obj = SegmentTree(arr, max)
     print(seg_obj.tree)

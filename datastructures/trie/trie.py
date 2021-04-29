@@ -59,26 +59,27 @@ class Trie:
             current_dict = current_dict[letter]
         return current_dict["_cnt_"]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     words = ["hello", "world", "wow", "delete", "dell", "hello"]
     t = Trie(*words)
     print("Printing the trie", t.root)
 
     # Checking for basic contains
-    res = t.__contains__('world')
+    res = t.__contains__("world")
     print(res)
 
     # Checking for prefix
-    res = t.starts_with('worl')
+    res = t.starts_with("worl")
     print(res)
 
     # Checking for basic contains before deletion
-    res = t.__contains__('delete')
+    res = t.__contains__("delete")
     print(res)
 
     # Checking for contains after deletion
-    t.__delitem__('delete')
-    res = t.__contains__('delete')
+    t.__delitem__("delete")
+    res = t.__contains__("delete")
     print(res)
     print(t.root)
 

@@ -142,14 +142,14 @@ class Fenwick:
         i += 1
         while i < len(self.BIT):
             self.BIT[i] += val
-            i += (i & -i)
+            i += i & -i
 
     def query(self, i):
         i += 1
         ans = 0
         while i > 0:
             ans += self.BIT[i]
-            i -= (i & -i)
+            i -= i & -i
         return ans
 
     def sumRange(self, i: int, j: int) -> int:

@@ -17,6 +17,6 @@ def find_continuous_subsegment(arr):
     print("The tmp is:", temp)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [2, 2, 2, 1, 1, 2, 2]
     find_continuous_subsegment(arr)
