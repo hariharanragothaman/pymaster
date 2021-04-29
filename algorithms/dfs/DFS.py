@@ -6,6 +6,14 @@ Depth-First Search of a Tree
 4. Questions like number of islands in 2D matrices
 """
 
+from typing import List, Iterator
+
+class TreeNode:
+    def __init__(self, value, left=None, right=None):
+        self.val = value
+        self.left = left
+        self.right = right
+
 # General method to retrieve all paths using DFS
 def paths(root):
     if not root:
@@ -51,8 +59,9 @@ def preorder_traversal(self, root: TreeNode) -> List[int]:
                 stack.append(node.left)
     return result
 
+
 # Post-Order is the just reversing the pre-order
-def postorder_traversal(self, root: TreeNode) -> List[int]:
+def postorder_traversal(root: TreeNode) -> List[int]:
     result = []
     if root is None:
         return result

@@ -4,6 +4,12 @@
 """
 # opening and closing of a file
 
+
+def process_file(f):
+    pass
+
+filename = '/tmp/foobar.txt'
+
 fd = open(filename)
 try:
     process_file(fd)

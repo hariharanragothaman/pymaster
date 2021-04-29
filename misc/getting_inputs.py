@@ -1,3 +1,6 @@
+import sys
+from bisect import bisect_left
+
 def bin_number(n, size=4):
     return bin(n)[2:].zfill(size)
 
