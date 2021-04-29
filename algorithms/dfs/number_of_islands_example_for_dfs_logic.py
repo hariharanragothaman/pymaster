@@ -25,6 +25,7 @@ Output: 3
 """
 from collections import deque
 
+
 def number_of_islands(grid):
     if not grid:
         return 0
@@ -36,11 +37,7 @@ def number_of_islands(grid):
 
     # Helper function to get the neighbours
     def neighbours(r, c):
-        for rows, cols in ((r - 1, c),
-                           (r, c - 1),
-                           (r + 1, c),
-                           (r, c + 1)
-                           ):
+        for rows, cols in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
             if 0 <= rows < R and 0 <= cols < C:
                 yield rows, cols
 
@@ -50,15 +47,15 @@ def number_of_islands(grid):
             r, c = q.popleft()
             for nei in neighbours(r, c):
                 x, y = nei
-                if grid[x][y] == '1':
-                    grid[x][y] = '0'
+                if grid[x][y] == "1":
+                    grid[x][y] = "0"
                     q.append((x, y))
 
     # Core logic - find a 1 and marks it's neighbours as zero
     for r, rows in enumerate(grid):
         for c, val in enumerate(rows):
-            if val == '1':
-                grid[r][c] = '0'
+            if val == "1":
+                grid[r][c] = "0"
                 helper(grid, r, c)
                 islands += 1
     return islands

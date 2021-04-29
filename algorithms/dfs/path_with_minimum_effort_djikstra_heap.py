@@ -22,11 +22,7 @@ class Solution:
         R, C = len(heights), len(heights[0])
 
         def neighbours(r, c, R, C):
-            for rows, cols in ((r - 1, c),
-                               (r, c - 1),
-                               (r + 1, c),
-                               (r, c + 1)
-                               ):
+            for rows, cols in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
                 if 0 <= rows < R and 0 <= cols < C:
                     yield rows, cols
 
@@ -62,7 +58,9 @@ class Solution:
             visited[x][y] = 1
 
             # Getting the not visited neighbours
-            not_visited_nei = [(nr, nc) for nr, nc in neighbours(x, y, R, C) if not visited[nr][nc]]
+            not_visited_nei = [
+                (nr, nc) for nr, nc in neighbours(x, y, R, C) if not visited[nr][nc]
+            ]
 
             for nr, nc in not_visited_nei:
                 heappush(q, (abs(heights[nr][nc] - heights[x][y]), nr, nc))
@@ -72,5 +70,3 @@ class Solution:
 
         # print("The min_cost is:", min_cost)
         return 0
-
-

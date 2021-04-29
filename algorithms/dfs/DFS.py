@@ -8,11 +8,13 @@ Depth-First Search of a Tree
 
 from typing import List, Iterator
 
+
 class TreeNode:
     def __init__(self, value, left=None, right=None):
         self.val = value
         self.left = left
         self.right = right
+
 
 # General method to retrieve all paths using DFS
 def paths(root):
@@ -31,6 +33,7 @@ def paths(root):
             stack.append((node.right, path + [node.right.val]))
     print(paths)
 
+
 # General Logic is: What you add in the last stack, is the first you will parse! - Remember Stack
 
 # Pre-Order Traversal
@@ -48,7 +51,7 @@ def preorder_traversal(self, root: TreeNode) -> List[int]:
     if root is None:
         return result
 
-    stack = [root, ]
+    stack = [root]
     while stack:
         node = stack.pop()
         if node:
@@ -66,7 +69,7 @@ def postorder_traversal(root: TreeNode) -> List[int]:
     if root is None:
         return result
 
-    stack = [root, ]
+    stack = [root]
     while stack:
         node = stack.pop()
         if node:

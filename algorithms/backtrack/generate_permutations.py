@@ -17,6 +17,8 @@ For example,
 """
 Generate permutations - The classic DFS way
 """
+
+
 def generate_permutations(arr):
     result = []
     if len(arr) == 0:
@@ -25,7 +27,7 @@ def generate_permutations(arr):
         return [arr]
     for i in range(len(arr)):
         extract = arr[i]
-        remaining = arr[:i] + arr[i+1:]
+        remaining = arr[:i] + arr[i + 1 :]
         for p in generate_permutations(remaining):
             result.append(p + [extract])
     return result
@@ -34,6 +36,8 @@ def generate_permutations(arr):
 """
 Generate permutations by yield an iterator.
 """
+
+
 def gen_permute_iter(arr):
     if len(arr) < 1:
         yield arr
@@ -42,7 +46,8 @@ def gen_permute_iter(arr):
             for i in range(len(arr)):
                 yield perm[:i] + arr[0:1] + perm[i:]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     nums = [1, 2, 3]
     op = generate_permutations(nums)
     print("The op is:", op)

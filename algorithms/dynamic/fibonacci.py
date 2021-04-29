@@ -13,7 +13,7 @@ def fibonacci_bruteforce(n):
     print("{indent} fibonacci({n}) called".format(indent=" " * stack_depth(), n=n))
     if n <= 2:
         return 1
-    return fibonacci_bruteforce(n-1) + fibonacci_bruteforce(n-2)
+    return fibonacci_bruteforce(n - 1) + fibonacci_bruteforce(n - 2)
 
 
 def fibonacci_top_down_1(n):
@@ -25,17 +25,19 @@ def fibonacci_top_down_1(n):
     if n <= 2:
         return 1
     # Setting the cache variable that is 'attached' to this function
-    if not hasattr(fibonacci_top_down_1, 'cache'):
+    if not hasattr(fibonacci_top_down_1, "cache"):
         fibonacci_top_down_1.cache = {}
 
 
 # Now this top-down function can be re-written like this to keep the original function simple
 def cached(f):
     cache = {}
+
     def worker(*args):
         if args not in cache:
             cache[args] = f(*args)
         return cache[args]
+
     return worker
 
 
@@ -43,7 +45,7 @@ def cached(f):
 def fibonacci_top_down_2(n):
     if n <= 2:
         return 1
-    return fibonacci_top_down_2(n-1) + fibonacci_top_down_2(n-2)
+    return fibonacci_top_down_2(n - 1) + fibonacci_top_down_2(n - 2)
 
 
 # Now all this can be completely simplified and written as following
@@ -56,7 +58,7 @@ from functools import lru_cache
 def fibonacci_top_down_3(n):
     if n <= 2:
         return 1
-    return fibonacci_top_down_3(n-1) + fibonacci_top_down_3(n-2)
+    return fibonacci_top_down_3(n - 1) + fibonacci_top_down_3(n - 2)
 
 
 # Approach DP2 in Python
@@ -67,5 +69,5 @@ def fibonacci_bottom_up(n):
     return cache[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     fibonacci_bruteforce(6)

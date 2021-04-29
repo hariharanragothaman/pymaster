@@ -7,6 +7,7 @@ For most tasks, we can transform the requirement into the following generalized 
 
 from typing import List
 
+
 def binary_search(array) -> int:
     def condition(value) -> bool:
         pass
@@ -19,6 +20,7 @@ def binary_search(array) -> int:
         else:
             left = mid + 1
     return left
+
 
 """
 We need to modify only 3 parts in the above template for any binary-search
@@ -41,9 +43,11 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 You are given an API bool isBadVersion(version) which will return whether version is bad.
 """
 
+
 def isBadVersion(pivot):
     """ Internal API"""
     pass
+
 
 def firstBadVersion(self, n):
     """
@@ -66,6 +70,8 @@ def firstBadVersion(self, n):
 Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. 
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
 """
+
+
 def mySqrt(x):
     left, right = 0, x
     while left < right:
@@ -75,6 +81,7 @@ def mySqrt(x):
         else:
             right = mid
     return left - 1
+
 
 """
 There's one thing I'd like to point out. 
@@ -92,10 +99,12 @@ This is why I mentioned earlier that we need to decide which value to return, le
 Given a sorted array of distinct integers and a target value, return the index if the target is found.
 If not, return the index where it would be if it were inserted in order.
 """
+
+
 def searchInsert(nums: List[int], target: int) -> int:
     left, right = 0, len(nums)
     while left < right:
-        mid = left + (right - left ) // 2
+        mid = left + (right - left) // 2
         if nums[mid] >= target:
             right = mid
         else:

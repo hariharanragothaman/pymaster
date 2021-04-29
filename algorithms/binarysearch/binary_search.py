@@ -32,12 +32,13 @@ def binary_search_gen(array, target):
 
 # TEMPLATE #2 - Advanced Binary Search
 
+
 def binary_search_advanced(array, target):
     if len(array) == 0:
         return -1
     left, right = 0, len(array)
     while left < right:
-        mid = (left+right) // 2
+        mid = (left + right) // 2
         if array[mid] == target:
             return mid
         elif array[mid] < target:
@@ -48,6 +49,7 @@ def binary_search_advanced(array, target):
     if left != len(array) and array[left] == target:
         return left
     return -1
+
 
 # TEMPLATE #3 - Advanced Binary Search II
 def binary_search_new(nums, target):
@@ -66,8 +68,10 @@ def binary_search_new(nums, target):
 
     # Post-processing:
     # End Condition: left + 1 == right
-    if nums[left] == target: return left
-    if nums[right] == target: return right
+    if nums[left] == target:
+        return left
+    if nums[right] == target:
+        return right
     return -1
 
 
@@ -75,6 +79,8 @@ def binary_search_new(nums, target):
 # Binary search recipe using bisect
 
 from bisect import bisect_left
+
+
 def binary_search(array, val):
     index = bisect_left(array, val)
     if index != len(array) and array[index] == val:
@@ -83,7 +89,7 @@ def binary_search(array, val):
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [2, 4, 5, 8, 10]
     value = 4
     res = binary_search(arr, 1)

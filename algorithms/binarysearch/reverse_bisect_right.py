@@ -9,7 +9,8 @@ def reverse_bisect(scores, value):
             low = mid + 1
     return low
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     arr = [5, 4, 2, 2, 1, 0]
     op = reverse_bisect(arr, 3)
-    print(op) 
+    print(op)

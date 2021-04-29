@@ -9,6 +9,8 @@ For example,
   [2,1,1]
 ]
 """
+
+
 def generate_unique_permute(arr):
     """
     The go-to can also putting them in a set when generating all permutations
@@ -18,7 +20,7 @@ def generate_unique_permute(arr):
     for n in arr:
         temp = []
         for l in result:
-            for i in range(len(l)+1):
+            for i in range(len(l) + 1):
                 temp.append(l[:i] + [n] + l[i:])
                 if i < len(l) and l[i] == n:
                     break
@@ -26,7 +28,7 @@ def generate_unique_permute(arr):
     return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = [1, 2, 3]
     op = generate_unique_permute(nums)
     print(op)

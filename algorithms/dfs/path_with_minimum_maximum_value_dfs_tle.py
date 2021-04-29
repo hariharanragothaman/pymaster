@@ -26,11 +26,7 @@ class Solution:
         R, C = len(M), len(M[0])
 
         def neighbours(r, c, R, C):
-            for rows, cols in ((r - 1, c),
-                               (r, c - 1),
-                               (r + 1, c),
-                               (r, c + 1)
-                               ):
+            for rows, cols in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
                 if 0 <= rows < R and 0 <= cols < C:
                     yield rows, cols
 
@@ -54,7 +50,9 @@ class Solution:
             max_value = 0
             max_r, max_c = 0, 0
 
-            not_visited_nei = [(nr, nc) for nr, nc in neighbours(i, j, R, C) if not visited[nr][nc]]
+            not_visited_nei = [
+                (nr, nc) for nr, nc in neighbours(i, j, R, C) if not visited[nr][nc]
+            ]
 
             # I think the TLE is because of this
             for nr, nc in not_visited_nei:
@@ -69,8 +67,8 @@ class Solution:
         return min(path)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    arr = [[5,4,5],[1,2,6],[7,4,6]]
+    arr = [[5, 4, 5], [1, 2, 6], [7, 4, 6]]
     res = s.maximumMinimumPath(arr)
     print(res)
