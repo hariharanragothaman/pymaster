@@ -11,7 +11,8 @@ def longest_increasing_subsequence(arr):
             temp[index] = n
     return temp
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     arr = []
     result = longest_increasing_subsequence(arr)
     print(result)

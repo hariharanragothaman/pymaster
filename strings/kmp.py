@@ -7,6 +7,7 @@ Time complexity : O(N+M)
 N and M is the length of text and pattern, respectively.
 """
 
+
 def knuth_morris_pratt(text, pattern):
     n, m = len(text), len(pattern)
     pi = [0 for i in range(m)]

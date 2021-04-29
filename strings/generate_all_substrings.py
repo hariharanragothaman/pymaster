@@ -3,5 +3,5 @@
 s = "Success"
 for left in range(len(s)):
     for right in range(left, len(s)):
-        substring = s[left:right+1]
+        substring = s[left : right + 1]
         print(substring)

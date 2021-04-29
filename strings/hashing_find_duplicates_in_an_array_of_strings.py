@@ -1,14 +1,15 @@
 from typing import List
 from collections import defaultdict
 
+
 def compute_hash(s):
     p = 31
-    m = 10**9 + 9
+    m = 10 ** 9 + 9
     hash_value = 0
     pow = 1
 
     for c in s:
-        hash_value = (hash_value + (ord(c) - ord('a') + 1) * pow ) % m
+        hash_value = (hash_value + (ord(c) - ord("a") + 1) * pow) % m
         pow = (pow * p) % m
     return hash_value
 
@@ -33,6 +34,6 @@ def group_identical_strings(arr: List[str]):
     print("The result groups are:", result_groups.values())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = ["abc", "abc", "defgh", "codeforces", "leetcode", "hello", "world", "hello"]
     group_identical_strings(arr)

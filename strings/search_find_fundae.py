@@ -1,5 +1,5 @@
 a = "abcdabcabcdef"
-target ="b"
+target = "b"
 
 
 """
@@ -13,7 +13,7 @@ a.find(target)
 a.find(target, 2, len(a))
 
 # returns the highest index
-a.rfind((target,0, len(a)))
+a.rfind((target, 0, len(a)))
 
 """
 Using the index() function
