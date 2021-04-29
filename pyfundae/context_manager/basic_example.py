@@ -8,7 +8,8 @@
 def process_file(f):
     pass
 
-filename = '/tmp/foobar.txt'
+
+filename = "/tmp/foobar.txt"
 
 fd = open(filename)
 try:

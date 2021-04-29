@@ -1,5 +1,6 @@
 # To define an Class for Opening a file
 
+
 class OpenFile:
     def __init__(self, filename, mode):
         print("Entering the constructor")
@@ -19,6 +20,7 @@ class OpenFile:
             self.file_handler.close()
         return
 
-with OpenFile('../misc/test.txt', 'r') as f:
+
+with OpenFile("../misc/test.txt", "r") as f:
     print("Reading a file")
     print(f.read())

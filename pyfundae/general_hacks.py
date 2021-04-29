@@ -25,7 +25,7 @@ check = all(c for c in samples if c > 5)
 
 
 # Basic example of Lambda
-addition = lambda x, y : x + y
+addition = lambda x, y: x + y
 addition(4, 5)
 
 # Writing if - else in one-line

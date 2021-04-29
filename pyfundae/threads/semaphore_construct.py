@@ -11,6 +11,7 @@ starvation, deadlock, livelock
 
 import threading
 
+
 class Semaphore:
     def __init__(self, max_available):
         self.cv = threading.Condition()
