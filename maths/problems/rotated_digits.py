@@ -14,7 +14,6 @@ Note that 1 and 10 are not good numbers, since they remain unchanged after rotat
 """
 
 
-
 class Solution:
     def rotatedDigits(self, N: int) -> int:
         k = 1
@@ -22,9 +21,9 @@ class Solution:
         while k <= N:
             s = str(k)
             # These if rotated give invalid
-            if all(d not in '347' for d in s):
+            if all(d not in "347" for d in s):
                 # These digits rotate and give valid
-                if any(d in '2569' for d in s):
+                if any(d in "2569" for d in s):
                     cnt += 1
             k += 1
         return cnt

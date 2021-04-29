@@ -2,6 +2,8 @@
 A number is strobogrammatic if the number looks the same, when rotate by 180 degrees,
 upside down
 """
+
+
 def is_strobogrammatic(num):
     """
     :type num: str
@@ -16,7 +18,7 @@ def is_strobogrammatic(num):
     i = 0
     j = len(num) - 1
     while i <= j:
-        x = comb.find(num[i]+num[j])
+        x = comb.find(num[i] + num[j])
         print(x)
         if x == -1:
             return False
@@ -25,7 +27,7 @@ def is_strobogrammatic(num):
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = "11"
     res = is_strobogrammatic(s)
     print(res)

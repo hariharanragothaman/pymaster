@@ -14,24 +14,22 @@ matrix[:] = zip(*matrix[::-1])
 def get_rows(matrice):
     return [[c for c in r] for r in matrice]
 
+
 # To the cols of the matrix
 def get_columns(matrice):
     return zip(*matrice)
 
+
 # To get the neighbours of a matrix element
 def neighbours(r, c, R, C):
-    for rows, cols in ((r - 1, c),
-                       (r, c - 1),
-                       (r + 1, c),
-                       (r, c + 1)
-                       ):
+    for rows, cols in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
         if 0 <= rows < R and 0 <= cols < C:
             yield rows, cols
 
 
 # Another way to write directions is:
 i, j = 0, 0  # Assuming this is the start position
-dirs = ((0,1),(0,-1),(1,0),(-1,0))
+dirs = ((0, 1), (0, -1), (1, 0), (-1, 0))
 for x, y in dirs:
     row = i + x
     cols = j + y
@@ -39,7 +37,7 @@ for x, y in dirs:
 # *****************************
 # All diagonal elements have common difference between (i and j)
 # Getting all all the diagonal elements
-A = [[1, 2, 3], [4, 5 ,6], [7, 8, 9]]
+A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 n, m = 3, 3
 d = collections.defaultdict(list)
 for i in range(n):

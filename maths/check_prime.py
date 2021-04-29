@@ -8,7 +8,7 @@ def prime_check(n):
 
     j = 5
     while j * j <= n:
-        if n % j == 0 or n % (j+2) == 0:
+        if n % j == 0 or n % (j + 2) == 0:
             return False
         j += 6
     return True

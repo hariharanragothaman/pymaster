@@ -8,4 +8,4 @@ else:
 
 # This is the equivalent of dividing by 2
 j = 36
-print( j >> 1)
+print(j >> 1)

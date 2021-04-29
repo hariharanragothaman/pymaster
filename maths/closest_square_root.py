@@ -7,6 +7,7 @@ is less than or equal to the given integer.
 
 # Linear approach is bruteforce, will take more than 10^9 iterations for 32 bit integer.
 
+
 def compute_square_root(k):
     # Obviously we have to use binary search
     left, right = 0, k
@@ -17,6 +18,7 @@ def compute_square_root(k):
         else:
             right = pivot - 1
     return left - 1
+
 
 op = compute_square_root(300)
 print(op)

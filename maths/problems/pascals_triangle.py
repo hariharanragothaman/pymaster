@@ -21,6 +21,7 @@ class Solution:
 # Another way of doing is as follows:
 # We can build the final answer immediately, using the identity binom(n, i) = binom(n, i - 1) * (n - i + 1) // i.
 
+
 class Solution:
     def solve(self, n):
         ans = [1]
