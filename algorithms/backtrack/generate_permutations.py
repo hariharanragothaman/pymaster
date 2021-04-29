@@ -38,7 +38,7 @@ def gen_permute_iter(arr):
     if len(arr) < 1:
         yield arr
     else:
-        for perm in gen_permute_iter(arr[1:])
+        for perm in gen_permute_iter(arr[1:]):
             for i in range(len(arr)):
                 yield perm[:i] + arr[0:1] + perm[i:]
 

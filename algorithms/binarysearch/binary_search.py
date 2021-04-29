@@ -18,12 +18,12 @@ def binary_search_gen(array, target):
     if len(array) == 0:
         return -1
 
-    left, right = 0, len(nums) - 1
+    left, right = 0, len(array) - 1
     while left <= right:
         mid = (left + right) // 2
         if array[mid] == target:
             return mid
-        elif nums[mid] < target:
+        elif array[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
@@ -35,7 +35,7 @@ def binary_search_gen(array, target):
 def binary_search_advanced(array, target):
     if len(array) == 0:
         return -1
-    left, right = 0, len(nums)
+    left, right = 0, len(array)
     while left < right:
         mid = (left+right) // 2
         if array[mid] == target:
@@ -45,7 +45,7 @@ def binary_search_advanced(array, target):
         else:
             right = mid
 
-    if left != len(array) and nums[left] == target:
+    if left != len(array) and array[left] == target:
         return left
     return -1
 

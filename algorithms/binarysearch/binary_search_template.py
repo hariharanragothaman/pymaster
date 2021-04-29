@@ -41,6 +41,9 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 You are given an API bool isBadVersion(version) which will return whether version is bad.
 """
 
+def isBadVersion(pivot):
+    """ Internal API"""
+    pass
 
 def firstBadVersion(self, n):
     """
