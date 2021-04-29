@@ -13,49 +13,52 @@ There are 2 approaches to this:
 """
 
 # These example inputs can be generated using defaultdict
-graph_with_cycle = {'A': ['B', 'C'],
-                    'B': ['D'],
-                    'C': ['F'],
-                    'D': ['E', 'F'],
-                    'E': ['B'],
-                    'F': []}
+graph_with_cycle = {
+    "A": ["B", "C"],
+    "B": ["D"],
+    "C": ["F"],
+    "D": ["E", "F"],
+    "E": ["B"],
+    "F": [],
+}
 
-graph_without_cycle = {'A': ['B', 'C'],
-                       'B': ['D', 'E'],
-                       'C': ['F'],
-                       'D': ['E'],
-                       'E': [],
-                       'F': []}
+graph_without_cycle = {
+    "A": ["B", "C"],
+    "B": ["D", "E"],
+    "C": ["F"],
+    "D": ["E"],
+    "E": [],
+    "F": [],
+}
 
-color_map = { 'WHITE': 0,
-              'GRAY':  1,
-              'BLACK': 2
-            }
+color_map = {"WHITE": 0, "GRAY": 1, "BLACK": 2}
+
 
 def is_in_cycle(graph, states, vertex):
-    if states[vertex] == color_map['GRAY']:
+    if states[vertex] == color_map["GRAY"]:
         return True
 
-    states[vertex] = color_map['GRAY']
+    states[vertex] = color_map["GRAY"]
 
     for nei in graph[vertex]:
         if is_in_cycle(graph, states, nei):
             return True
 
-    states[vertex] = color_map['BLACK']
+    states[vertex] = color_map["BLACK"]
     return False
 
 
 def contains_cycle(graph):
-    states = { vertex: color_map['WHITE'] for vertex in graph }
+    states = {vertex: color_map["WHITE"] for vertex in graph}
     for vertex, state in states.items():
-        if state == color_map['WHITE'] and is_in_cycle(graph, states, vertex):
+        if state == color_map["WHITE"] and is_in_cycle(graph, states, vertex):
             return True
     return False
+
 
 # -----------------------------------------------------------------------------------------
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(contains_cycle(graph_with_cycle))
     print(contains_cycle(graph_without_cycle))

@@ -12,6 +12,7 @@ an odd number of edges.
 from collections import defaultdict
 from typing import List
 
+
 def check_bipartite(graph: List[List[int]]) -> bool:
     adj_map = defaultdict(list)
     for i, c in enumerate(graph):
@@ -24,7 +25,7 @@ def check_bipartite(graph: List[List[int]]) -> bool:
     for start in range(n):
         if color[start] == -1:
             color[start] = 0
-            stack = [start, ]
+            stack = [start]
 
             while stack:
                 parent = stack.pop()
@@ -38,10 +39,8 @@ def check_bipartite(graph: List[List[int]]) -> bool:
     return True
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # constructing the graph
-    inp = [[1,2,3],[0,2],[0,1,3],[0,2]]
+    inp = [[1, 2, 3], [0, 2], [0, 1, 3], [0, 2]]
     result = check_bipartite(inp)
     print("Is the graph bi-partite?: ", result)

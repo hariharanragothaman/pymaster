@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 
 
@@ -11,7 +10,8 @@ def find_path(start, end, parents):
         parent = parents[parent]
     return path[::-1]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
 
     # Creating a graph with key as node and value as parents
     g = defaultdict()

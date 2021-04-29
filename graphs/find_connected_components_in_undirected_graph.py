@@ -1,6 +1,7 @@
 from collections import defaultdict
 from collections import deque
 
+
 def connected_components(graph, n):
     """
     Vertices start from 0.. n
@@ -29,7 +30,8 @@ def connected_components(graph, n):
 
     return overall
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     vertices, edges = list(map(int, input().split()))
     graph = defaultdict(list)
     i = 0

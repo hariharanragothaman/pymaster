@@ -24,9 +24,10 @@ def countComponents(n: int, g: List[List[int]]) -> int:
 
     return count
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     vertices = 5
-    edges = [[0,1],[1,2],[3,4]]
+    edges = [[0, 1], [1, 2], [3, 4]]
     graph = defaultdict(list)
     for u, v in edges:
         graph[u].append(v)

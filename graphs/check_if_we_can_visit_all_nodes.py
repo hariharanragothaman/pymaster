@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 class Graph:
     def __init__(self):
         self.graph = defaultdict(list)
@@ -11,7 +12,7 @@ class Graph:
 
     def dfs_check(self):
         visited = {}
-        start = '0'
+        start = "0"
 
         # Mark all visited to False initially
         for k in range(self.number_of_nodes):

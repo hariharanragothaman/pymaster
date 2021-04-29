@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def topo_sort_variant(graph, n):
     # Returns a topologically sorted graph
     res = []
@@ -20,10 +21,10 @@ def topo_sort_variant(graph, n):
     return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     min_roads_required = 0
     # Cities are vertexes and roads are the edges
-    ncities, nroads  = map(int, input().split())
+    ncities, nroads = map(int, input().split())
     g = defaultdict(list)
     for i in range(nroads):
         u, v = map(int, input().split())

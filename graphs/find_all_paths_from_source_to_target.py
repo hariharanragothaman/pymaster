@@ -35,7 +35,7 @@ def find_all_paths(start, end, path=[]):
     return all_paths
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     edges = [[4, 3, 1], [3, 2, 4], [3], [4], []]
     graph = defaultdict(list)
     for i, e in enumerate(edges):

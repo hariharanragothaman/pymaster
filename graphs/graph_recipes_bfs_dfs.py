@@ -11,8 +11,7 @@ class Graph:
 
     def add_edge(self, node, neighbour):
         self.graph[node].append(neighbour)
-        self.graph[neighbour].append(node) 
-
+        self.graph[neighbour].append(node)
 
     # General strategy for BFS  - Works for undirected-graph
     def BFS(self, start):
@@ -38,10 +37,10 @@ class Graph:
         for k in self.graph:
             visited[k] = False
 
-        stack = [start, ]
+        stack = [start]
         visited[start] = True
 
-        q= deque(start)
+        q = deque(start)
         while q:
             vertex = q.pop()
             for neighbours in self.graph[vertex]:

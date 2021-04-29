@@ -1,5 +1,4 @@
-
-# Brent's algorithm to detect cycles 
+# Brent's algorithm to detect cycles
 def cycle_finding(f, x0):
     # main phase: search successive powers of two
     power = lam = 1
