@@ -6,11 +6,13 @@ accessed and written to, but there is no extra logic on top of it.
 
 from dataclasses import dataclass
 
+
 @dataclass
 class Vector3D:
     x: int
     y: int
     z: int
+
 
 u = Vector3D(1, 1, -1)
 print(u)

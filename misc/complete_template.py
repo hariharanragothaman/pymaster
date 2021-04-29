@@ -56,7 +56,8 @@ class IOWrapper(IOBase):
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
-if 'PyPy' in sys.version:
+
+if "PyPy" in sys.version:
     from _continuation import continulet
 else:
     import threading
@@ -69,17 +70,22 @@ def binNumber(n, size=4):
 def iar():
     return list(map(int, input().split()))
 
+
 def ini():
     return int(input())
+
 
 def isp():
     return map(int, input().split())
 
+
 def sti():
     return str(input())
 
+
 def par(a):
-    print(' '.join(list(map(str, a))))
+    print(" ".join(list(map(str, a))))
+
 
 def tdl(outerListSize, innerListSize, defaultValue=0):
     return [[defaultValue] * innerListSize for i in range(outerListSize)]
@@ -88,7 +94,8 @@ def tdl(outerListSize, innerListSize, defaultValue=0):
 def sts(s):
     s = list(s)
     s.sort()
-    return ''.join(s)
+    return "".join(s)
+
 
 def bis(a, x):
     i = bisect_left(a, x)
@@ -114,12 +121,15 @@ def main():
     print(*values)
 
 
-if __name__ == '__main__':
-    if 'PyPy' in sys.version:
+if __name__ == "__main__":
+    if "PyPy" in sys.version:
+
         def bootstrap(cont):
             call, arg = cont.switch()
             while True:
-                call, arg = cont.switch(to=continulet(lambda _, f, args: f(*args), call, arg))
+                call, arg = cont.switch(
+                    to=continulet(lambda _, f, args: f(*args), call, arg)
+                )
 
         cont = continulet(bootstrap)
         cont.switch()

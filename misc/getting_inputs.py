@@ -1,6 +1,7 @@
 import sys
 from bisect import bisect_left
 
+
 def bin_number(n, size=4):
     return bin(n)[2:].zfill(size)
 
@@ -22,7 +23,7 @@ def sti():
 
 
 def par(a):
-    print(' '.join(list(map(str, a))))
+    print(" ".join(list(map(str, a))))
 
 
 def tdl(outerListSize, innerListSize, defaultValue=0):
@@ -32,7 +33,7 @@ def tdl(outerListSize, innerListSize, defaultValue=0):
 def sts(s):
     s = list(s)
     s.sort()
-    return ''.join(s)
+    return "".join(s)
 
 
 def bis(a, x):
@@ -65,6 +66,6 @@ def just_read():
     return sys.stdin.readline()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     values = int_list()
     print(*values)

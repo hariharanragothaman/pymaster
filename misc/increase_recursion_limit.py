@@ -1,6 +1,6 @@
 import sys
 
-if 'PyPy' in sys.version:
+if "PyPy" in sys.version:
     from _continuation import continulet
 else:
     import threading
@@ -10,12 +10,15 @@ def main():
     pass
 
 
-if __name__ == '__main__':
-    if 'PyPy' in sys.version:
+if __name__ == "__main__":
+    if "PyPy" in sys.version:
+
         def bootstrap(cont):
             call, arg = cont.switch()
             while True:
-                call, arg = cont.switch(to=continulet(lambda _, f, args: f(*args), call, arg))
+                call, arg = cont.switch(
+                    to=continulet(lambda _, f, args: f(*args), call, arg)
+                )
 
         cont = continulet(bootstrap)
         cont.switch()
