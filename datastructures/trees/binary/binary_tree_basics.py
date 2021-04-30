@@ -58,7 +58,7 @@ class BinaryTree:
 
         return self.root
 
-    def print_tree(self, node):
+    def print_level_order(self, node):
         traverse = []
         level = 0
 
@@ -80,6 +80,28 @@ class BinaryTree:
             level += 1
         return traverse
 
+    def postorder(self, root):
+        res_temp = []
+        post_order = []
+
+        if not root:
+            return post_order
+
+        stack = [root]
+
+        while stack:
+            root = stack.pop()
+            res_temp.append(root.data)
+            if root.left:
+                stack.append(root.left)
+            if root.right:
+                stack.append(root.right)
+
+        while res_temp:
+            post_order.append(res_temp.pop())
+
+        return post_order
+
 
 if __name__ == "__main__":
     arr = [3, 9, 20, None, None, 15, 7]
@@ -94,5 +116,8 @@ if __name__ == "__main__":
     rt = bt.create_tree(node_map)
     print("The root of the tree is:", rt.data)
 
-    result = bt.print_tree(rt)
-    print(*result)
+    level_order = bt.print_level_order(rt)
+    print(*level_order)
+
+    post_order = bt.postorder(rt)
+    print(*post_order)
