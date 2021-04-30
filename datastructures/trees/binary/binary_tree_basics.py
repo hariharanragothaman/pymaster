@@ -80,7 +80,16 @@ class BinaryTree:
             level += 1
         return traverse
 
-    def postorder(self, root):
+    def print_postorder(self, root):
+        """
+        Post-order-traversal - heavily useful when traversing from the bottom
+        Time Complexity: O(n)
+        Args:
+            root:
+
+        Returns:
+
+        """
         res_temp = []
         post_order = []
 
@@ -102,6 +111,16 @@ class BinaryTree:
 
         return post_order
 
+    def postorder_recursive(self, root, result=None):
+        if root is None:
+            return []
+        if result is None:
+            result = []
+        self.postorder_recursive(root.left, result)
+        self.postorder_recursive(root.right, result)
+        result.append(root.data)
+        return result
+
 
 if __name__ == "__main__":
     arr = [3, 9, 20, None, None, 15, 7]
@@ -119,5 +138,5 @@ if __name__ == "__main__":
     level_order = bt.print_level_order(rt)
     print(*level_order)
 
-    post_order = bt.postorder(rt)
+    post_order = bt.print_postorder(rt)
     print(*post_order)
