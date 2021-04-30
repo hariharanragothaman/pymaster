@@ -135,6 +135,23 @@ class BinaryTree:
             node = node.right
         return inorder
 
+    def print_preorder(self, root):
+        result = []
+
+        if root is None:
+            return result
+
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node:
+                result.append(node.data)
+                if node.right:
+                    stack.append(node.right)
+                if node.left:
+                    stack.append(node.left)
+        return result
+
 
 if __name__ == "__main__":
     arr = [3, 9, 20, None, None, 15, 7]
@@ -149,11 +166,18 @@ if __name__ == "__main__":
     rt = bt.create_tree(node_map)
     print("The root of the tree is:", rt.data)
 
-    level_order = bt.print_level_order(rt)
-    print(*level_order)
+    # Level Order traversal
+    levelorder = bt.print_level_order(rt)
+    print(*levelorder)
 
-    post_order = bt.print_postorder(rt)
-    print(*post_order)
+    # Post Order traversal
+    postorder = bt.print_postorder(rt)
+    print(*postorder)
 
+    # In order traversal
     inorder = bt.print_inorder(rt)
     print(*inorder)
+
+    # Preorder traversal
+    preorder = bt.print_preorder(rt)
+    print(*preorder)
