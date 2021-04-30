@@ -59,7 +59,13 @@ class BinaryTree:
 
         return self.root
 
-    def print_level_order(self, node):
+    def get_level_order(self, node) -> List[int]:
+        """
+        This is classic BFS template in Trees
+        Args:
+            node:
+        Returns:
+        """
         traverse = []
         level = 0
 
@@ -81,7 +87,7 @@ class BinaryTree:
             level += 1
         return traverse
 
-    def print_postorder(self, root):
+    def get_postorder(self, root):
         """
         Post-order-traversal - heavily useful when traversing from the bottom
         Time Complexity: O(n)
@@ -122,7 +128,7 @@ class BinaryTree:
         result.append(root.data)
         return result
 
-    def print_inorder(self, node) -> List[int]:
+    def get_inorder(self, node) -> List[int]:
         inorder = []
         stack = []
         while node or stack:
@@ -135,7 +141,7 @@ class BinaryTree:
             node = node.right
         return inorder
 
-    def print_preorder(self, root):
+    def get_preorder(self, root):
         result = []
 
         if root is None:
@@ -152,6 +158,10 @@ class BinaryTree:
                     stack.append(node.left)
         return result
 
+    def maximum_depth(self, root):
+        _levels = self.get_level_order(root)
+        return len(_levels)
+
 
 if __name__ == "__main__":
     arr = [3, 9, 20, None, None, 15, 7]
@@ -167,17 +177,21 @@ if __name__ == "__main__":
     print("The root of the tree is:", rt.data)
 
     # Level Order traversal
-    levelorder = bt.print_level_order(rt)
+    levelorder = bt.get_level_order(rt)
     print(*levelorder)
 
     # Post Order traversal
-    postorder = bt.print_postorder(rt)
+    postorder = bt.get_postorder(rt)
     print(*postorder)
 
     # In order traversal
-    inorder = bt.print_inorder(rt)
+    inorder = bt.get_inorder(rt)
     print(*inorder)
 
     # Preorder traversal
-    preorder = bt.print_preorder(rt)
+    preorder = bt.get_preorder(rt)
     print(*preorder)
+
+    # Get Maximum depth
+    depth = bt.maximum_depth(rt)
+    print("The maximum_depth is: ", depth)
