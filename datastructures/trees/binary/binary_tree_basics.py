@@ -3,6 +3,7 @@ Binary Tree - Fundamentals
 """
 
 from collections import deque
+from typing import List
 
 """
 General things to remember
@@ -111,7 +112,7 @@ class BinaryTree:
 
         return post_order
 
-    def postorder_recursive(self, root, result=None):
+    def postorder_recursive(self, root, result=None) -> List[int]:
         if root is None:
             return []
         if result is None:
@@ -120,6 +121,19 @@ class BinaryTree:
         self.postorder_recursive(root.right, result)
         result.append(root.data)
         return result
+
+    def print_inorder(self, node) -> List[int]:
+        inorder = []
+        stack = []
+        while node or stack:
+            while node:
+                stack.append(node)
+                node = node.left
+
+            node = stack.pop()
+            inorder.append(node.data)
+            node = node.right
+        return inorder
 
 
 if __name__ == "__main__":
@@ -140,3 +154,6 @@ if __name__ == "__main__":
 
     post_order = bt.print_postorder(rt)
     print(*post_order)
+
+    inorder = bt.print_inorder(rt)
+    print(*inorder)
