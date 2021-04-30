@@ -164,7 +164,7 @@ class BinaryTree:
 
 
 if __name__ == "__main__":
-    arr = [3, 9, 20, None, None, 15, 7]
+    arr = [1, 2, 2, 3, 4, 4, 3]
     print("The initial array is:", arr)
 
     node_map = {}
