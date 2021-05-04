@@ -6,6 +6,10 @@ class Node:
 
 
 def isSymmetric(root: Node) -> bool:
+    """
+    Check if left sub-tree and right-subtree are mirror images of each other
+    Using standard DFS approach
+    """
     if root is None:
         return True
 
