@@ -36,7 +36,7 @@ class BinaryTree:
         Function that builds the tree
         Returns:
         """
-        n = len(arr)
+        n = len(self.arr)
         self.root = hmap[0]
 
         # This is just to assign left and right children
