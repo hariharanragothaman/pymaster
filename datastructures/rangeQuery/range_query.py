@@ -1,3 +1,8 @@
+"""
+Range Query to get min and max b/w left and right
+"""
+
+
 class RangeQuery:
     def __init__(self, data, func=min):
         self.func = func
