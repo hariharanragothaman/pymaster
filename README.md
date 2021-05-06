@@ -16,9 +16,9 @@
   - [Hashmap: Generic Stuff](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/hashmap/hashmap.py)
   - [LinkedList: SLL](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/linkedlist/linkedlist.py)
   - [Range Query: Basics, Prefix Sum, Sparse Table](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/basics_range_query.py)
-  - [Range Query](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trees/range_query/range_query.py)
-  - [Range Query: FenwickTree](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/fenwick.py)
-  - [Range Query: Segment Tree](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trees/segment/segment_tree.py)
+  - [Range Query (Min/Max)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trees/range_query/range_query.py)
+  - [Range Query: FenwickTree (Sum)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/fenwick_get_sum.py)
+  - [Range Query: Segment Tree (Min/Max)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/segment_tree_min_max.py)
   - [Trie: Template1](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie.py)
   - [Trie: Template2](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie2.py)
 </details>
