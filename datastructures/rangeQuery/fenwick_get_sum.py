@@ -123,6 +123,18 @@ index = n
 3. ADD to original number
 """
 
+# Time Complexity is
+# Updates / calculating O(log(n)) time
+# O(n) - memory
+
+
+"""
+It is obvious that there is no easy way of finding minimum of range [l,r] using Fenwick tree, 
+as Fenwick tree can only answer queries of type [0,r]. 
+Additionally, each time a value is update'd, the new value has to be smaller than the current value 
+(because the min function is not reversible). These, of course, are significant limitations.
+
+"""
 from typing import List
 
 
@@ -154,3 +166,10 @@ class Fenwick:
 
     def sumRange(self, i: int, j: int) -> int:
         return self.query(j) - self.query(i - 1)
+
+
+if __name__ == '__main__':
+    nums = [6, 4, 1, 7, 3, 4, 2]
+    f = Fenwick(nums)
+    sum_between = f.sumRange(2, 5)
+    print("The sum between the indexes is:", sum_between)

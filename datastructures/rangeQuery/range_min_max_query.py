@@ -16,9 +16,7 @@ class RangeQuery:
     def query(self, start, stop):
         """func of data[start, stop)"""
         depth = (stop - start).bit_length() - 1
-        return self.func(
-            self._data[depth][start], self._data[depth][stop - (1 << depth)]
-        )
+        return self.func(self._data[depth][start], self._data[depth][stop - (1 << depth)])
 
     def __getitem__(self, idx):
         return self._data[0][idx]

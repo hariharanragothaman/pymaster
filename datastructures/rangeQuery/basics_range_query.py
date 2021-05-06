@@ -100,7 +100,7 @@ class Query:
             "Basic RMQ::The minimum b/w left and right is:",
             arr[self.lookup[left][right]],
         )
-        return arr[lookup[left][right]]
+        return arr[self.lookup[left][right]]
 
 
 q = Query()
