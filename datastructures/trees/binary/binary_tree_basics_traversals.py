@@ -45,13 +45,13 @@ class BinaryTree:
             node = hmap[i]
 
             if 0 < (2 * i + 1) < n:
-                if arr[2 * i + 1]:
+                if self.arr[2 * i + 1]:
                     node.left = hmap[2 * i + 1]
             else:
                 node.left = None
 
             if 0 < (2 * i + 2) < n:
-                if arr[2 * i + 2]:
+                if self.arr[2 * i + 2]:
                     node.right = hmap[2 * i + 2]
             else:
                 node.right = None
