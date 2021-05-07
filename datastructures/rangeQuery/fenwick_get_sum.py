@@ -139,6 +139,7 @@ from typing import List
 
 
 class Fenwick:
+    """ Fenwick Tree Supports only Sum queries """
     def __init__(self, nums: List[int]):
         self.nums = nums
         self.BIT = [0] * (len(self.nums) + 1)
