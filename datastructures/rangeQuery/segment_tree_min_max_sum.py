@@ -51,20 +51,10 @@ class SegmentTree:
             l, r = (l + 1) // 2, (r - 1) // 2
         return res
 
-    def get_sum(self, start, stop):
-        start += self.size
-        stop += self.size
-
-        result = 0
-
-        while start <= stop:
-            if start % 2 == 1:
-                result += self.tree[start + 1]
-
 
 if __name__ == "__main__":
-    arr = [5, 8, 6, 3, 2, 7, 2, 6]
-    seg_obj = SegmentTree(arr, max)
+    arr = [5, 8, 6, 3, 2, 7, 2, 10]
+    seg_obj = SegmentTree(arr, function=lambda x, y: x + y)
     print(seg_obj.tree)
-    result = seg_obj.query(2, 7)
+    result = seg_obj.query(2, 4)
     print("The result is: ", result)
