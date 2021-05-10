@@ -20,7 +20,7 @@
   - [Range Query: Basics, Prefix Sum, Sparse Table](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/basics_range_query.py)
   - [Range Query (Min/Max)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/range_min_max_query.py)
   - [Range Query: FenwickTree (Sum)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/fenwick_get_sum.py)
-  - [Range Query: Segment Tree (Min/Max)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/segment_tree_min_max.py)
+  - [Range Query: Segment Tree (Min/Max/Sum)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/segment_tree_min_max_sum.py)
   - [Trie: Template1](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie.py)
   - [Trie: Template2](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie2.py)
 </details>
