@@ -23,7 +23,8 @@ How can we perform both operations in O(logn) time?
 
 
 class SegmentTree:
-    def __init__(self, arr, function):
+    def __init__(self, arr, function=min):
+        # Making the length of the array the power of 2
         self.tree = [None for _ in range(len(arr))] + arr
         self.size = len(arr)
         self.fn = function
