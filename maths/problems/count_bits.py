@@ -1,7 +1,9 @@
 """
 Count number of bits that are set to 1 in a non-negative integer
 """
-def count_bits(n) -> int:
+
+
+def count_bits_set_to_one(n) -> int:
     """
     x << y # Shift to left by y bits -- x * (2**y)
     x >> y  # Shift to right by y bits -- x // (2**y)
@@ -21,5 +23,5 @@ def count_bits(n) -> int:
 
 if __name__ == '__main__':
     n = int(input())
-    result = count_bits(n)
+    result = count_bits_set_to_one(n)
     print(f"The number of bits is: {result}")
