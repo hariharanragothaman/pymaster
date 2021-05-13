@@ -20,4 +20,5 @@ def can_reach_end(arr):
 if __name__ == '__main__':
     arr = [3, 3, 1, 0, 2, 0, 1]
     arr2 = [3, 2, 0, 0, 2, 0, 1]
-    can_reach_end(arr2)
+    result = can_reach_end(arr2)
+    print(f"Can we reach the end? {result}")
