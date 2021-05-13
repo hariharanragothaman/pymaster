@@ -7,6 +7,7 @@ delete duplicates in sorted array, and shift elements to the left
 
 from typing import List
 
+
 def delete_duplicates(arr: List[int]) -> int:
     """
     Return the number of valid entries after deletion

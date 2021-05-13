@@ -6,7 +6,7 @@ Depth-First Search of a Tree
 4. Questions like number of islands in 2D matrices
 """
 
-from typing import List, Iterator
+from typing import List
 
 
 class TreeNode:
@@ -14,24 +14,6 @@ class TreeNode:
         self.val = value
         self.left = left
         self.right = right
-
-
-# General method to retrieve all paths using DFS
-def paths(root):
-    if not root:
-        return []
-    stack = [(root, [root.val])]
-    paths = []
-
-    while stack:
-        node, path = stack.pop()
-        if not node.left and not node.right:
-            paths.append(path)
-        if node.left:
-            stack.append((node.left, path + [node.left.val]))
-        if node.right:
-            stack.append((node.right, path + [node.right.val]))
-    print(paths)
 
 
 # General Logic is: What you add in the last stack, is the first you will parse! - Remember Stack
