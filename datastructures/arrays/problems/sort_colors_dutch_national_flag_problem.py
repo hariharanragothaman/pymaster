@@ -35,5 +35,28 @@ def dutch_flag_partition(nums, pivot):
             right -= 1
 
 
+def dutch_flag_partition_optimized(nums, pivot):
+    """
+    here the idea is:
+        1. If value is less than pivot - we exhange it with the first pivot occurrence
+        2. If value is equal to the pivot - we advance to the next unclassified element
+        3. If the value is greater then the pivot = - we exchange it with the last unclassified element
+    """
+    smaller = 0
+    equal = 0
+    larger = len(nums) - 1
+
+    while equal < larger:
+        if nums[equal] < pivot:
+            nums[smaller], nums[equal] = nums[equal], nums[smaller]
+            smaller += 1
+            equal += 1
+        elif nums[equal] == pivot:
+            equal += 1
+        elif nums[equal] > pivot:
+            nums[equal], nums[larger] = nums[larger], nums[equal]
+            larger -= 1
+            
+
 if __name__ == '__main__':
     pass
