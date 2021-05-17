@@ -1,4 +1,5 @@
-# DP Problem # 19
+# DP Problem # 19 from DP interview book
+# This is just a classic - Static range query problem
 
 from typing import List
 
