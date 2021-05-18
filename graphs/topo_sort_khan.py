@@ -29,7 +29,7 @@ def khan(graph):
     q = []
     topo_sort = []
 
-    # Adding all elements with indegree zero into the queue
+    # Adding all elements with in-degree zero into the queue
     for i in range(n):
         if in_degree[i] == 0:
             q.append(i)
@@ -40,7 +40,7 @@ def khan(graph):
         node = q.pop()
         topo_sort.append(node)
 
-        idx[topo_sort[-1]], nr = nr, nr+1
+        idx[topo_sort[-1]], nr = nr, nr + 1
 
         # Reducing the in-degree
         for edge in graph[topo_sort[-1]]:
@@ -50,7 +50,8 @@ def khan(graph):
 
     return topo_sort, idx, nr == n
 
+
 if __name__ == '__main__':
-    g = {0:[], 1:[], 2:[3], 3:[1], 4:[0, 1], 5:[0, 2]}
+    g = {0: [], 1: [], 2: [3], 3: [1], 4: [0, 1], 5: [0, 2]}
     result_sort = khan(g)
     print("The topological sort is:", result_sort)
