@@ -53,13 +53,15 @@ class SegmentTree:
     def __repr__(self):
         return "SegmentTree({0})".format(self.data)
 
-
-n, q = map(int, input().split())
-data = list(map(int, input().split()))
-st = SegmentTree(data=data, func=lambda x, y: x + y)
-
-for _ in range(q):
-    l, r = map(int, input().split())
-    l -= 1
-    r -= 1
-    print(st.query(l, r + 1))
+if __name__ == '__main__':
+    n, q = map(int, input().split())
+    data = list(map(int, input().split()))
+    # st = SegmentTree(data=data, func=lambda x, y: x + y)
+    st = SegmentTree(data=data)
+    for _ in range(q):
+        l, r = map(int, input().split())
+        l -= 1
+        r -= 1
+        print(st.query(l, r + 1))
+    item = st.__getitem__(4)
+    print(item)
