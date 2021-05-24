@@ -40,7 +40,7 @@ print(d)
 # Setdefault feature example
 # String transforms to another string problem?
 def can_convert(s1, s2):
-    """ Convert 2 strings of same length by doing zero or more conversions"""
+    """Convert 2 strings of same length by doing zero or more conversions"""
     if s1 == s2:
         return True
     dp = {}
