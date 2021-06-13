@@ -50,15 +50,36 @@ for i in range(n):
         A[i][j] = d[i - j].pop()
 
 # *******************************
+# Getting the diagonals
 
+def get_right_diagonals(arr):
+    rows = len(arr)
+    hashmap = {}
+    for i in range(rows):
+        hashmap[(rows-1-i, i)] = arr[rows-1-i][i]
+    return hashmap
 
-# Getting the diagnoals
-rows = len(matrix)
-hashmap = {}
-# Storing the left diagonals in a hashmap
-for i in range(rows):
-    hashmap[(i, i)] = matrix[i][i]
+def get_left_diagonals(arr):
+    rows = len(arr)
+    hashmap = {}
+    for i in range(rows):
+        hashmap[(i, i)] = arr[i][i]
+    return hashmap
 
-# Storing the right diagonals in a hashmap
-for i in range(rows):
-    hashmap[(rows - 1 - i, i)] = matrix[rows - 1 - i][i]
+def get_middle_row(arr):
+    # if n is odd
+    rows = len(arr)
+    mid = rows // 2
+    hashmap = {}
+    for i in range(n):
+        hashmap[(mid, i)] = arr[mid][i]
+    return hashmap
+
+def get_middle_column(arr):
+    # if n is odd
+    rows = len(arr)
+    mid = rows // 2
+    hashmap = {}
+    for i in range(n):
+        hashmap[(i, mid)] = arr[i][mid]
+    return hashmap
