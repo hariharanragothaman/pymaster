@@ -13,3 +13,13 @@ def timeit(func):
         return result
 
     return measure_time
+
+@timeit
+def foo():
+    s = 0
+    for i in range(10**5):
+        s += i
+    print(s)
+
+if __name__ == '__main__':
+    foo()
