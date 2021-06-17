@@ -6,7 +6,7 @@ Solution Approach:
 from functools import reduce
 
 
-def rabin_karp(s, t):
+def rabin_karp(t, s):
     if len(s) > len(t):
         return -1
 
@@ -37,7 +37,7 @@ def rabin_karp(s, t):
 
 
 if __name__ == "__main__":
-    t = "GACGCCA"
-    s = "CGC"
-    result = rabin_karp(s, t)
+    text = "GACGCCA"
+    pattern = "CGC"
+    result = rabin_karp(text, pattern)
     print(result)

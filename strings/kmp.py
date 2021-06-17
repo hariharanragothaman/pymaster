@@ -33,3 +33,10 @@ def knuth_morris_pratt(text, pattern):
                 ret.append(i - m + 1)
                 j = pi[j - 1]
     return ret
+
+
+if __name__ == '__main__':
+    text = "GACGCCA"
+    pattern = "CGC"
+    result = knuth_morris_pratt(text, pattern)
+    print(f"The result is: {result}")
