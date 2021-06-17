@@ -9,10 +9,12 @@ def longest_increasing_subsequence(arr):
             temp.append(n)
         else:
             temp[index] = n
+        print(f"The temp is: {temp}")
     return temp
 
 
 if __name__ == "__main__":
-    arr = []
+    arr = [7, 3, 5, 3, 6, 2, 9, 8]
+    print(f"The I/P array is: {arr}")
     result = longest_increasing_subsequence(arr)
     print(result)
