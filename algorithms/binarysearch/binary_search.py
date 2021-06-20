@@ -13,7 +13,7 @@ def binary_search_smart():
 """
 
 
-# TEMPLATE #1: Usual approach
+# TEMPLATE #1: Usual approach - when we know the number exists, and we are searching for it's index
 def binary_search_gen(array, target):
     if len(array) == 0:
         return -1
@@ -38,7 +38,7 @@ def binary_search_advanced(array, target):
         return -1
     left, right = 0, len(array)
     while left < right:
-        mid = (left + right) // 2
+        mid = (left + right) >> 1
         if array[mid] == target:
             return mid
         elif array[mid] < target:
