@@ -78,18 +78,18 @@ class DisjointSetUnionFast:
         self.num_sets = n
 
     def find(self, a):
-        a_copy = a
+        acopy = a
         while a != self.parent[a]:
             a = self.parent[a]
-        while a_copy != a:
-            self.parent[a_copy], a = a, self.parent[a_copy]
+        while acopy != a:
+            self.parent[acopy], acopy = a, self.parent[acopy]
         return a
 
     def union(self, a, b):
-        a, b  = self.find(a), self.find(b)
+        a, b = self.find(a), self.find(b)
         if a != b:
             if self.size[a] < self.size[b]:
-                a, b  = b, a
+                a, b = b, a
 
             self.num_sets -= 1
             self.parent[b] = a
