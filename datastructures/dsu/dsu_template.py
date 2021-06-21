@@ -36,7 +36,7 @@ class DisJointSets:
         if x_root == y_root: return False
 
         # Swappinpy for linking optimization
-        if self.sizes[x_root] < self.sizes(y_root):
+        if self.sizes[x_root] < self.sizes[y_root]:
             x_root, y_root = y_root, x_root
         self.parents[y_root] = x_root
         self.sizes[x_root] += self.sizes[y_root]
