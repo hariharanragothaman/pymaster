@@ -27,7 +27,7 @@ class DisJointSets:
         return self.parents[x]
 
     def union(self, x: int, y: int) -> bool:
-        """ This also connectes both 2 edges together - as in creates the graph itself"""
+        """ This also connects both 2 edges together - as in creates the graph itself"""
         """ Returns whether the merge changed connectivity"""
         x_root = self.find(x)
         y_root = self.find(y)
@@ -100,6 +100,7 @@ class DisjointSetUnionFast:
 
     def __len__(self):
         return self.num_sets
+
 
 class UnionFind:
     def __init__(self, n):
