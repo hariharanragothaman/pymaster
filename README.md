@@ -23,6 +23,7 @@
   - [Range Query: Segment Tree (Min/Max/Sum)](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/rangeQuery/segment_tree_min_max_sum.py)
   - [Trie: Template1](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie.py)
   - [Trie: Template2](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/trie/trie2.py)
+  - [DisjointSet Union](https://github.com/hariharanragothaman/pymaster/blob/master/datastructures/dsu/dsu_template.py)
 </details>
 
 <details>
