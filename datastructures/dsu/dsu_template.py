@@ -72,3 +72,4 @@ def solve():
 ######### Now Let's go in for a faster implementation #################
 
 class DisjointSetUnionFast:
+    pass
