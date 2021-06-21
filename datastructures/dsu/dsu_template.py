@@ -72,4 +72,31 @@ def solve():
 ######### Now Let's go in for a faster implementation #################
 
 class DisjointSetUnionFast:
-    pass
+    def __init__(self, n):
+        self.parent = list(range(n))
+        self.size = [1] * n
+        self.num_sets = n
+
+    def find(self, a):
+        a_copy = a
+        while a != self.parent[a]:
+            a = self.parent[a]
+        while a_copy != a:
+            self.parent[a_copy], a = a, self.parent[a_copy]
+        return a
+
+    def union(self, a, b):
+        a, b  = self.find(a), self.find(b)
+        if a != b:
+            if self.size[a] < self.size[b]:
+                a, b  = b, a
+
+            self.num_sets -= 1
+            self.parent[b] = a
+            self.size[a] += self.size[b]
+
+    def set_size(self, a):
+        return self.size[self.find(a)]
+
+    def __len__(self):
+        return self.num_sets
