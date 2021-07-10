@@ -19,6 +19,8 @@ def compute_hash(s):
     for i in range(n):
         hash_values[i + 1] = (hash_values[i] + (ord(s[i]) - ord('a') + 1) * power_mod[i]) % m
 
+    return hash_values
+
 
 def count_occurences(text, pattern):
     """
