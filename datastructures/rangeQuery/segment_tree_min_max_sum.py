@@ -57,5 +57,5 @@ if __name__ == "__main__":
     arr = [5, 8, 6, 3, 2, 7, 2, 10]
     seg_obj = SegmentTree(arr, function=lambda x, y: x + y)
     print(seg_obj.tree)
-    result = seg_obj.query(2, 4)
+    result = seg_obj.query(2, 2)
     print("The result is: ", result)

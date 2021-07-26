@@ -1,34 +1,32 @@
 from collections import defaultdict
-from collections import deque
 
+def connected_components(n, graph):
+    components, visited = [], [False] * n
 
-def connected_components(graph, n):
-    """
-    Vertices start from 0.. n
-    """
-    overall = set()
-    start = 0
-    while start < vertices:
-        visited = {}
-        rpath = []
+    def dfs(start):
+        component, stack = [], [start]
 
-        for k in graph:
-            visited[k] = False
+        while stack:
+            start = stack[-1]
 
-        q = deque([start])
-        visited[start] = True
+            if visited[start]:
+                stack.pop()
+                continue
+            else:
+                visited[start] = True
+                component.append(start)
 
-        while q:
-            node = q.popleft()
-            for nei in graph[node]:
-                if not visited[nei]:
-                    visited[nei] = True
-                    q.append(nei)
-            rpath.append(node)
-        overall.add(tuple(sorted(rpath)))
-        start += 1
+            for i in graph[start]:
+                if not visited[i]:
+                    stack.append(i)
 
-    return overall
+        return component
+
+    for i in range(n):
+        if not visited[i]:
+            components.append(dfs(i))
+
+    return components
 
 
 if __name__ == "__main__":
