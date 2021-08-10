@@ -1,4 +1,4 @@
-from misc.time_decorator import timeit
+from pyfundae.misc.time_decorator import timeit
 
 @timeit
 def SAIS(A):

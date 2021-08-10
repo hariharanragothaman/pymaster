@@ -1,5 +1,4 @@
 from collections import defaultdict
-from itertools import zip_longest, islice
 
 """
 Let s be a string of length n
@@ -31,7 +30,7 @@ All the suffixes are:
  2. Applications
 """
 
-from misc.time_decorator import timeit
+from pyfundae.misc.time_decorator import timeit
 
 def build_suffix_array_naive(s):
     """ n**2 (log(n))"""

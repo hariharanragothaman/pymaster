@@ -1,6 +1,6 @@
 # DP Problem1 Example
 
-from misc.get_stack_depth import stack_depth
+from pyfundae.misc import stack_depth
 
 
 def fibonacci_bruteforce(n):
