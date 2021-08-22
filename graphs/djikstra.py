@@ -39,9 +39,21 @@ if __name__ == "__main__":
     for v in inp:
         source, target, weight = v[0], v[1], v[2]
         graph[source].append((target, weight))
+        graph[target].append((source, weight))
+
     print("The initial graph is:", graph)  # Perfect understanding
 
     dist_map, parents_map = dijkstra(n, graph, start)
     print("The graph is", graph)
     print("The final distance_map is:", dist_map)
     print("The final parents map is:", parents_map)
+
+    if parents_map[n-1] == -1:
+        print(-1)
+    else:
+        res, parent = [], n -1
+        while parent != parents_map[0]:
+            res.append(parent + 1)
+            parent = parents_map[parent]
+        res.reverse()
+        print(*res)
