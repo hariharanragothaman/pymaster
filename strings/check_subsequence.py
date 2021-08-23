@@ -3,7 +3,7 @@
 def is_sub_sequence1(s, t):
     for i in range(len(s)):
         try:
-            index = t.index(s[i)
+            index = t.index(s[i])
         except ValueError:
             return False
         t = t[index + 1 :]
