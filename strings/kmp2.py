@@ -36,8 +36,9 @@ def string_find(s, pat):
 
     return False
 
-if __name__ == '__main__':
-    s = 'HELLOWORLLD'
-    p = 'LL'
+
+if __name__ == "__main__":
+    s = "HELLOWORLLD"
+    p = "LL"
     res = string_find(s, p)
     print(res)

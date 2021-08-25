@@ -35,9 +35,9 @@ def count_triplets_that_form_gp(arr, r):
     total = 0
 
     for k in arr:
-        total += v3[k]    # Increment the number of triplets that end with k
-        v3[k*r] += v2[k]
-        v2[k*r] += 1
+        total += v3[k]  # Increment the number of triplets that end with k
+        v3[k * r] += v2[k]
+        v2[k * r] += 1
         print(f"The total is: {total}")
         print(f"The v2 map is: {v2}")
         print(f"The v3 map is: {v3}")

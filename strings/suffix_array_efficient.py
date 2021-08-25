@@ -1,5 +1,6 @@
 from pyfundae.misc.time_decorator import timeit
 
+
 @timeit
 def SAIS(A):
     """
@@ -62,7 +63,8 @@ def SAIS(A):
         LMS = [LMS[i] for i in SAIS([SA[i] for i in LMS])]
     return induced_sort(LMS)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = "abaab"
     tmp = [ord(c) for c in s]
     suffix_array = SAIS(tmp)

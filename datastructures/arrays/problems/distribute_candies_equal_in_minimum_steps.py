@@ -1,5 +1,6 @@
 # Refer: https://codeforces.com/contest/1538/problem/B
 
+
 def distribute_candies(arr, n):
     s = sum(arr)
     if s % n != 0:
@@ -12,7 +13,7 @@ def distribute_candies(arr, n):
     return cnt
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = int(input())
     i = 0
     while i < t:

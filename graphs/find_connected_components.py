@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def connected_components(n, graph):
     components, visited = [], [False] * n
 

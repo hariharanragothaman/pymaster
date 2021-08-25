@@ -35,7 +35,7 @@ def manachers_algorithm(s):
     C = R = 0
 
     for i in range(1, n - 1):
-        LPS[i] = (R > i) and min(R - i, LPS[2 * C - i]) # equals to i' = C - (i-C)
+        LPS[i] = (R > i) and min(R - i, LPS[2 * C - i])  # equals to i' = C - (i-C)
 
         # Attempt to expand palindrome centered around i
         while T[i + 1 + LPS[i]] == T[i - 1 - LPS[i]]:

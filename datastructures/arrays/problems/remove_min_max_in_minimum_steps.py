@@ -1,5 +1,5 @@
-
 # Refer: https://codeforces.com/contest/1538/problem/A
+
 
 def remove_max_min_in_minimum_steps(arr, n):
     # Getting the min and max values
@@ -14,13 +14,10 @@ def remove_max_min_in_minimum_steps(arr, n):
     iminr = n - imin + 1
     imaxr = n - imax + 1
 
-    print(min(max(imin, imax),
-              max(iminr, imaxr),
-              imin + imaxr,
-              iminr + imax))
+    print(min(max(imin, imax), max(iminr, imaxr), imin + imaxr, iminr + imax))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = int(input())
     i = 0
     while i < t:

@@ -2,7 +2,7 @@ import time
 
 
 def logging_time(func):
-    """ Decorator that logs the time """
+    """Decorator that logs the time"""
 
     def logger(*args, **kwargs):
         start = time.time()

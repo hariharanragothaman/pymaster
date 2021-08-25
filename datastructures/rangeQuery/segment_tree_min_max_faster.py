@@ -1,4 +1,5 @@
 import sys
+
 sys.setrecursionlimit(100000)
 
 
@@ -11,7 +12,7 @@ class SegmentTree:
         self._size = _size = 1 << (self._len - 1).bit_length()
 
         self.data = [default] * (2 * _size)
-        self.data[_size:_size + self._len] = data
+        self.data[_size : _size + self._len] = data
         for i in reversed(range(_size)):
             self.data[i] = func(self.data[i + i], self.data[i + i + 1])
 
@@ -53,7 +54,8 @@ class SegmentTree:
     def __repr__(self):
         return "SegmentTree({0})".format(self.data)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     n, q = map(int, input().split())
     data = list(map(int, input().split()))
     # st = SegmentTree(data=data, func=lambda x, y: x + y)

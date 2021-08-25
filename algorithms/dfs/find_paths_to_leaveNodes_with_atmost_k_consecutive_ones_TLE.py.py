@@ -26,10 +26,10 @@ def paths(root, arr, g, threshold):
     for s in paths:
         tmp_cnt = mx_cnt = 0
         for i in range(len(s)):
-            if s[i] == '1':
+            if s[i] == "1":
                 tmp_cnt += 1
                 mx_cnt = max(tmp_cnt, mx_cnt)
-            elif s[i] == '0':
+            elif s[i] == "0":
                 mx_cnt = max(tmp_cnt, mx_cnt)
                 tmp_cnt = 0
         if mx_cnt <= threshold:
@@ -37,7 +37,7 @@ def paths(root, arr, g, threshold):
     print(cnt)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     vertices, threshold = map(int, input().split())
     cats = [0] + list(map(int, input().split()))
     g = defaultdict(list)

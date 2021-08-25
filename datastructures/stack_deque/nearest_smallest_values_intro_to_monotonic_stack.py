@@ -30,14 +30,14 @@ def nearest_smaller_values(A, n):
             j -= 1
 
         if j == -1:
-            print(0, end=' ')
+            print(0, end=" ")
         else:
-            print(j+1, end=' ')
+            print(j + 1, end=" ")
 
 
 def nearest_smaller_values_optimized(A, n):
-    """ This is maintaining a monotonic stack?"""
-    result = ''
+    """This is maintaining a monotonic stack?"""
+    result = ""
 
     """
     Good optimzations
@@ -56,15 +56,16 @@ def nearest_smaller_values_optimized(A, n):
     print("The array is:")
     print(*A)
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         print("The incoming number is:", A[i])
         while A[stack[-1]] >= A[i]:
             stack.pop()
-        result += str(stack[-1]) + ' '
+        result += str(stack[-1]) + " "
         stack.append(i)
         print("The stack is:", stack)
-        print("*"*10)
+        print("*" * 10)
     print(result)
+
 
 if __name__ == "__main__":
     n = int(input())

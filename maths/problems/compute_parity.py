@@ -8,13 +8,13 @@ The parity of a binary word is:
 """
 
 
-def find_parity_using_string(n:int) -> int:
+def find_parity_using_string(n: int) -> int:
     str_n = str(n)
-    if str_n.count('1') % 2 == 0:
+    if str_n.count("1") % 2 == 0:
         return 0
     return 1
 
 
-if __name__ == '__main__':
-    result = find_parity_using_string(10**9 + 7)
+if __name__ == "__main__":
+    result = find_parity_using_string(10 ** 9 + 7)
     print(f"The result is: {result}")

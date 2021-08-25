@@ -5,7 +5,7 @@ from collections import defaultdict
 
 
 def dijkstra(n, graph, start):
-    """ Uses Dijkstra's algortihm to find the shortest path between in a graph. """
+    """Uses Dijkstra's algortihm to find the shortest path between in a graph."""
     vertex = list(range(1, n + 1))
     dist = [float("inf")] * n
     initial = [-1] * n
@@ -48,10 +48,10 @@ if __name__ == "__main__":
     print("The final distance_map is:", dist_map)
     print("The final parents map is:", parents_map)
 
-    if parents_map[n-1] == -1:
+    if parents_map[n - 1] == -1:
         print(-1)
     else:
-        res, parent = [], n -1
+        res, parent = [], n - 1
         while parent != parents_map[0]:
             res.append(parent + 1)
             parent = parents_map[parent]

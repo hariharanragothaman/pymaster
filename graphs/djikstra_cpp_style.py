@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 from heapq import heappop, heappush
 
+
 def dijkstra(graph, start=0):
     n = len(graph)
-    dist, parents = [float('inf')] * n, [-1] * n
+    dist, parents = [float("inf")] * n, [-1] * n
     dist[start] = 0
 
     queue = [(0, start)]

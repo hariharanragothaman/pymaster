@@ -2,6 +2,7 @@
 
 from bisect import bisect_left
 
+
 def solve2(arr, n, a, b):
     arr.sort()
 

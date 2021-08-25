@@ -32,8 +32,9 @@ All the suffixes are:
 
 from pyfundae.misc.time_decorator import timeit
 
+
 def build_suffix_array_naive(s):
-    """ n**2 (log(n))"""
+    """n**2 (log(n))"""
     suffixes = []
     for i in range(len(s)):
         suffixes.append(s[i:])
@@ -50,11 +51,13 @@ def build_suffix_array_naive(s):
         sufffix_array_result.append(hmap[c])
     return sufffix_array_result
 
+
 @timeit
 def build_suffix_array_naive_better(s):
     return [rank for suffix, rank in sorted((s[i:], i) for i in range(len(s)))]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = "abaab"
     suffix_array = build_suffix_array_naive_better(s)
     print(suffix_array)

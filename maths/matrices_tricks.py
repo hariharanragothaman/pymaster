@@ -52,12 +52,14 @@ for i in range(n):
 # *******************************
 # Getting the diagonals
 
+
 def get_right_diagonals(arr):
     rows = len(arr)
     hashmap = {}
     for i in range(rows):
-        hashmap[(rows-1-i, i)] = arr[rows-1-i][i]
+        hashmap[(rows - 1 - i, i)] = arr[rows - 1 - i][i]
     return hashmap
+
 
 def get_left_diagonals(arr):
     rows = len(arr)
@@ -65,6 +67,7 @@ def get_left_diagonals(arr):
     for i in range(rows):
         hashmap[(i, i)] = arr[i][i]
     return hashmap
+
 
 def get_middle_row(arr):
     # if n is odd
@@ -74,6 +77,7 @@ def get_middle_row(arr):
     for i in range(n):
         hashmap[(mid, i)] = arr[mid][i]
     return hashmap
+
 
 def get_middle_column(arr):
     # if n is odd

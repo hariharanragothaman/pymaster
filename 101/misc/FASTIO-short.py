@@ -2,6 +2,7 @@ import os, sys
 from io import BytesIO, IOBase
 from collections import Counter
 
+
 def main():
     pass
 

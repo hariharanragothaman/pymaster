@@ -11,6 +11,7 @@ def find_max(arr, queries):
             arr[idx] += value
     return max(arr)
 
+
 # To optimize this:- Another approach is to use lazy propogation of Segment Tree as well.
 
 
@@ -36,13 +37,13 @@ def array_manipulation(n, queries):
     return max_value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     n, m = list(map(int, input().split()))
     arr = [0] * n
     i = 0
     queries = []
     while i < m:
         a, b, val = list(map(int, input().split()))
-        q = queries.append((a-1, b-1, val))
+        q = queries.append((a - 1, b - 1, val))
         i += 1
     find_max(arr, queries)

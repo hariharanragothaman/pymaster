@@ -45,7 +45,7 @@ You are given an API bool isBadVersion(version) which will return whether versio
 
 
 def isBadVersion(pivot):
-    """ Internal API"""
+    """Internal API"""
     pass
 
 

@@ -13,7 +13,7 @@ def reorder_even_odd(nums: List[int]) -> List[int]:
     print(f"The reordered array is: {nums}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     # Time Complexity - O(n)
     # Space Complexity - O(1)

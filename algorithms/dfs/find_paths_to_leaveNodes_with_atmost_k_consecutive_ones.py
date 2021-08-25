@@ -19,7 +19,7 @@ cnt = 0
 
 while q:
     k, c, p = q.pop()
-    c = arr[k] * (c+1)
+    c = arr[k] * (c + 1)
     if c > threshold:
         continue
     if len(g[k]) == 1 and k != 1:

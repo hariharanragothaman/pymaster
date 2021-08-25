@@ -10,6 +10,8 @@ So given 'n' find maximum number of numbers have this property
 """
 
 from collections import defaultdict
+
+
 def sum_of_digits(n):
     s = str(n)
     total = 0
@@ -17,9 +19,10 @@ def sum_of_digits(n):
         total += int(c)
     return total
 
+
 g = defaultdict(int)
 n = 12
-for i in range(1, n+1):
+for i in range(1, n + 1):
     g[sum_of_digits(i)] += 1
 print(g)
 

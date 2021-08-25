@@ -4,6 +4,7 @@ If there is a cycle in a directed graph -  the graph cannot be topologically sor
 Directed acyclic graph
 """
 
+
 def topological_sort(graph):
     result = []
     visited = [0] * len(graph)
@@ -28,7 +29,8 @@ def topological_sort(graph):
 
     return result[::-1]
 
-if __name__ == '__main__':
-    g = {0:[], 1:[], 2:[3], 3:[1], 4:[0, 1], 5:[0, 2]}
+
+if __name__ == "__main__":
+    g = {0: [], 1: [], 2: [3], 3: [1], 4: [0, 1], 5: [0, 2]}
     result_sort = topological_sort(g)
     print("The topological sort is:", result_sort)

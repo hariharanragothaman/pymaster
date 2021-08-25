@@ -14,6 +14,7 @@ Initially, the display shows number n.
 Bob wants to get number m on the display. What minimum number of clicks he has to make in order to achieve this result?
 """
 
+
 def main():
     """
     Main function dedicated to get the I/P
@@ -41,6 +42,7 @@ def main():
             q.append(nxt)
 
     print(dist[b])
+
 
 if __name__ == "__main__":
     LOCAL = False

@@ -7,4 +7,4 @@ res = format(n, _f)
 print(res)
 
 # If I want the 0b infront of it
-_f = '#' + "0" + str(length) + "b"
+_f = "#" + "0" + str(length) + "b"

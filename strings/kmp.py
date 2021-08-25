@@ -35,7 +35,7 @@ def knuth_morris_pratt(text, pattern):
     return ret
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = "GACGCCA"
     pattern = "CGC"
     result = knuth_morris_pratt(text, pattern)

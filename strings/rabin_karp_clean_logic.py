@@ -17,7 +17,9 @@ def compute_hash(s):
     hash_values = [0] * (n + 1)
 
     for i in range(n):
-        hash_values[i + 1] = (hash_values[i] + (ord(s[i]) - ord('a') + 1) * power_mod[i]) % m
+        hash_values[i + 1] = (
+            hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]
+        ) % m
 
     return hash_values
 
@@ -39,12 +41,14 @@ def count_occurences(text, pattern):
     hash_values = [0] * (text_length + 1)
 
     for i in range(text_length):
-        hash_values[i + 1] = (hash_values[i] + (ord(text[i]) - ord('a') + 1) * power_mod[i]) % m
+        hash_values[i + 1] = (
+            hash_values[i] + (ord(text[i]) - ord("a") + 1) * power_mod[i]
+        ) % m
     # print("The string hash values are:", hash_values)
 
     pattern_hash = 0
     for i in range(pattern_length):
-        pattern_hash += ((ord(pattern[i]) - ord('a') + 1) * power_mod[i]) % m
+        pattern_hash += ((ord(pattern[i]) - ord("a") + 1) * power_mod[i]) % m
     # print("The pattern hash is:", pattern_hash)
 
     occurences = []
@@ -59,7 +63,8 @@ def count_occurences(text, pattern):
     print(len(occurences))
     return occurences
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     text = "GACGCCA"
     pattern = "CGC"
     result = count_occurences(text, pattern)

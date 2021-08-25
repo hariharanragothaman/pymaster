@@ -10,13 +10,14 @@ class RangeQuery:
 
     def query(self, begin, end):
         depth = (end - begin).bit_length() - 1
-        return self.func(self._data[depth][begin],
-                         self._data[depth][end - (1 << depth)])
+        return self.func(
+            self._data[depth][begin], self._data[depth][end - (1 << depth)]
+        )
 
 
 class LCA:
     def __init__(self, root, graph):
-        """ Assumes the graph is zero-indexed """
+        """Assumes the graph is zero-indexed"""
 
         self.first = [-1] * len(graph)
         self.path = [-1] * len(graph)

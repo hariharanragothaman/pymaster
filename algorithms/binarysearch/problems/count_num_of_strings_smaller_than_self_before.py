@@ -1,4 +1,3 @@
-
 # Problem Statement https://www.hackerearth.com/practice/codemonk/
 
 from collections import defaultdict
@@ -25,7 +24,7 @@ def solve(A):
         print(c)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     n = int(input())
     i = 0
     arr = []

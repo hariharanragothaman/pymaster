@@ -2,5 +2,5 @@
 
 n = int(input())
 s = list(map(int, input().split()))
-ans = sum(s)/n
-print('%.7f'%ans)
+ans = sum(s) / n
+print("%.7f" % ans)

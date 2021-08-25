@@ -51,7 +51,7 @@ def khan(graph):
     return topo_sort, idx, nr == n
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     g = {0: [], 1: [], 2: [3], 3: [1], 4: [0, 1], 5: [0, 2]}
     result_sort = khan(g)
     print("The topological sort is:", result_sort)

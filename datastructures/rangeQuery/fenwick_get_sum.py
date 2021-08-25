@@ -139,7 +139,8 @@ from typing import List
 
 
 class Fenwick:
-    """ Fenwick Tree Supports only Sum queries """
+    """Fenwick Tree Supports only Sum queries"""
+
     def __init__(self, nums: List[int]):
         self.nums = nums
         self.BIT = [0] * (len(self.nums) + 1)
@@ -169,7 +170,7 @@ class Fenwick:
         return self.query(j) - self.query(i - 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = [6, 4, 1, 7, 3, 4, 2]
     f = Fenwick(nums)
     sum_between = f.sumRange(2, 5)

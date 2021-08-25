@@ -14,7 +14,7 @@ def find_tree_diameter(g):
     # DFS - First time
 
     q = deque()
-    q.append((1,0))
+    q.append((1, 0))
     arbitrary_node = None
     visited = set()
     curr_max_length = 0
@@ -30,7 +30,6 @@ def find_tree_diameter(g):
         for nei in g[node]:
             if nei not in visited:
                 q.append((nei, length + 1))
-
 
     # Now keep this arbitary node as root, and find the node that is the maximum depth to it
     # That is the diameter of the tree
@@ -55,10 +54,10 @@ def find_tree_diameter(g):
     return diameter_of_tree
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     n = int(input())
     g = defaultdict(list)
-    for i in range(0, n-1):
+    for i in range(0, n - 1):
         u, v = map(int, input().split())
         g[u].append(v)
         g[v].append(u)

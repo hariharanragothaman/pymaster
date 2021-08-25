@@ -17,8 +17,8 @@ class DisJointSets:
         self.parents = [-1 for _ in range(size)]
         self.sizes = [1 for _ in range(size)]
 
-    def find(self, x:int):
-        """ Find the representative node in a's component"""
+    def find(self, x: int):
+        """Find the representative node in a's component"""
         if self.parents[x] == -1:
             return x
         # Oooh - This is a recursive call - We need to be careful here
@@ -27,13 +27,14 @@ class DisJointSets:
         return self.parents[x]
 
     def union(self, x: int, y: int) -> bool:
-        """ This also connects both 2 edges together - as in creates the graph itself"""
+        """This also connects both 2 edges together - as in creates the graph itself"""
         """ Returns whether the merge changed connectivity"""
         x_root = self.find(x)
         y_root = self.find(y)
 
         # The connectivity has not changed
-        if x_root == y_root: return False
+        if x_root == y_root:
+            return False
 
         # Swappinpy for linking optimization
         if self.sizes[x_root] < self.sizes[y_root]:
@@ -41,6 +42,7 @@ class DisJointSets:
         self.parents[y_root] = x_root
         self.sizes[x_root] += self.sizes[y_root]
         return True
+
 
 ### Lets take a look at an example problem
 """
@@ -56,12 +58,13 @@ if t == 1 , tell if u and v are connected?
       we need to use DSU 
 """
 
+
 def solve():
     size, queries = list(map(int, input().split()))
     i = 0
     dsu = DisJointSets(size=size)
     while i < queries:
-        t, u, v  = list(map(int, input().split()))
+        t, u, v = list(map(int, input().split()))
         if t == 0:
             dsu.union(u, v)
         else:
@@ -70,6 +73,7 @@ def solve():
 
 
 ######### Now Let's go in for a faster implementation #################
+
 
 class DisjointSetUnionFast:
     def __init__(self, n):

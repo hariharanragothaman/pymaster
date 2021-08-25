@@ -11,12 +11,12 @@ Generic version of the problem:
 
 
 def sortColors(nums):
-    """ The sort Colors() problem is just a variant of the dutch national flag problem, where the pivot is 1 """
+    """The sort Colors() problem is just a variant of the dutch national flag problem, where the pivot is 1"""
     dutch_flag_partition(nums, pivot=1)
 
 
 def dutch_flag_partition(nums, pivot):
-    """ Idea is to group the elements in-place"""
+    """Idea is to group the elements in-place"""
     n = len(nums)
 
     left = 0
@@ -56,7 +56,7 @@ def dutch_flag_partition_optimized(nums, pivot):
         elif nums[equal] > pivot:
             nums[equal], nums[larger] = nums[larger], nums[equal]
             larger -= 1
-            
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     pass

@@ -20,7 +20,7 @@ def delete_duplicates(arr: List[int]) -> int:
 
     cnt = 1
     for i in range(1, len(arr)):
-        if arr[i] != arr[i-1]:
+        if arr[i] != arr[i - 1]:
             cnt += 1
     print(f"The total count is: {cnt}")
 
@@ -39,9 +39,7 @@ def delete_duplicates_updated(arr: List[int]) -> List[int]:
     print(f"The array is: {arr}")
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [2, 3, 5, 5, 7, 11, 11, 11, 15]
     delete_duplicates(arr)
     delete_duplicates_updated(arr)

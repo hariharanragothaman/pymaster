@@ -14,7 +14,7 @@ def find_tree_diameter(g, n):
 
     diameter_of_tree = 0
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         print(f"Considering {i} as root")
         curr_max_length = 0
         q = deque()
@@ -29,7 +29,7 @@ def find_tree_diameter(g, n):
 
             for nei in g[node]:
                 if nei not in visited:
-                    q.append((nei, length+1))
+                    q.append((nei, length + 1))
 
         print(f"The max_length for {i} is: {curr_max_length}")
         diameter_of_tree = max(curr_max_length, diameter_of_tree)
@@ -37,13 +37,14 @@ def find_tree_diameter(g, n):
 
     return diameter_of_tree
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     n = int(input())
     g = defaultdict(list)
-    for i in range(0, n-1):
+    for i in range(0, n - 1):
         u, v = map(int, input().split())
         g[u].append(v)
         g[v].append(u)
     # print(g)
-    result  = find_tree_diameter(g, n)
+    result = find_tree_diameter(g, n)
     print(result)

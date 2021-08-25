@@ -17,7 +17,7 @@ def can_reach_end(arr):
     return start >= end
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr = [3, 3, 1, 0, 2, 0, 1]
     arr2 = [3, 2, 0, 0, 2, 0, 1]
     result = can_reach_end(arr2)
