@@ -49,13 +49,13 @@ class SegmentTree:
                 res = self.tree[l] if res is None else self.fn(res, self.tree[l])
             if r % 2 == 0:
                 res = self.tree[r] if res is None else self.fn(res, self.tree[r])
-            l, r = (l + 1) // 2, (r - 1) // 2
+            l, r = (l + 1) >> 1, (r - 1) >> 1
         return res
 
 
 if __name__ == "__main__":
     arr = [5, 8, 6, 3, 2, 7, 2, 10]
-    seg_obj = SegmentTree(arr, function=lambda x, y: x + y)
+    seg_obj = SegmentTree(arr, function=max)
     print(seg_obj.tree)
-    result = seg_obj.query(2, 2)
+    result = seg_obj.query(0, 7)
     print("The result is: ", result)
