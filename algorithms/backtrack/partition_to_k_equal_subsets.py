@@ -1,5 +1,6 @@
 from typing import *
 
+
 def canPartitionKSubsets(A: List[int], k: int) -> bool:
     """
     We are able to smell the related topic.
@@ -60,12 +61,12 @@ def can_partition_k_subsets_optimized(A, k):
         if current_total > target:
             return False
         if current_total == target:
-            return solve(0, count+1, 0)
+            return solve(0, count + 1, 0)
 
         for j in range(index, n):
             if not visited[j]:
                 visited[j] = True
-                if solve(j+1, count, current_total + A[j]):
+                if solve(j + 1, count, current_total + A[j]):
                     return True
 
                 # Now we need to back-track
@@ -74,4 +75,3 @@ def can_partition_k_subsets_optimized(A, k):
         return False
 
     return solve(0, 0, 0)
-

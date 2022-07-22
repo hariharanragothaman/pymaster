@@ -3,6 +3,7 @@ Given a directed graph, return a list of lists, containing
 the strongly connected components in topological order
 """
 
+
 def find_strongly_connected_components(graph):
     SCC, S, P = [], [], []
     depth = [0] * len(graph)

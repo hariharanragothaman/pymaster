@@ -5,7 +5,7 @@ def sieve(n):
         # If prime[p] is not changed, then it is a prime
         if prime[p] == 1:
             # Update all multiples of p
-            for i in range(p ** 2, n + 1, p):
+            for i in range(p**2, n + 1, p):
                 prime[i] = 0
         p += 1
     prime[0] = 0

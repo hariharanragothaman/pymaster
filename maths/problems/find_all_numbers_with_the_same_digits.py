@@ -8,7 +8,7 @@ def count_if_all_digits_are_same(n):
     A = []
     for c in map(int, "123456789"):
         x = c
-        while x < 10 ** 9:
+        while x < 10**9:
             A.append(x)
             x = 10 * x + c
     return A

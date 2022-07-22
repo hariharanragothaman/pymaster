@@ -1,7 +1,7 @@
 import resource, sys
 
-resource.setrlimit(resource.RLIMIT_STACK, (2 ** 29, -1))
-sys.setrecursionlimit(10 ** 7)
+resource.setrlimit(resource.RLIMIT_STACK, (2**29, -1))
+sys.setrecursionlimit(10**7)
 
 
 def get_nth_fibonacci(n):
@@ -22,5 +22,5 @@ def get_nth_fibonacci(n):
 if __name__ == "__main__":
     n = int(input())
     res = get_nth_fibonacci(n)
-    mod = 10 ** 9 + 7
+    mod = 10**9 + 7
     print(res % mod)

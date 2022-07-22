@@ -21,7 +21,7 @@ def timeit(func):
 @timeit
 def foo():
     s = 0
-    for i in range(10 ** 5):
+    for i in range(10**5):
         s += i
     print(s)
 

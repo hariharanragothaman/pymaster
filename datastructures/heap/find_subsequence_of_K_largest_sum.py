@@ -10,6 +10,7 @@
 import heapq
 from collections import Counter
 
+
 def subsequence_of_length_k_max_sum(nums, k):
     """
     Push elements into a heap
@@ -27,7 +28,6 @@ def subsequence_of_length_k_max_sum(nums, k):
 
     cnt = Counter(heap)
     res = []
-    
 
     # This is done to preserve the order of the subsequence and get the values from the heap
     for n in nums:

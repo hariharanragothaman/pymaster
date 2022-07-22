@@ -16,5 +16,5 @@ def find_parity_using_string(n: int) -> int:
 
 
 if __name__ == "__main__":
-    result = find_parity_using_string(10 ** 9 + 7)
+    result = find_parity_using_string(10**9 + 7)
     print(f"The result is: {result}")

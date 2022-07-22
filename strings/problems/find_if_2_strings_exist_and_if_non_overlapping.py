@@ -5,7 +5,7 @@ The strings can be in any order.
 from typing import List
 
 p = 31
-m = 10 ** 9 + 9
+m = 10**9 + 9
 
 
 def compute_hash(s):

@@ -4,7 +4,7 @@ from collections import defaultdict
 
 def compute_hash(s):
     p = 31
-    m = 10 ** 9 + 9
+    m = 10**9 + 9
     hash_value = 0
     pow = 1
 
