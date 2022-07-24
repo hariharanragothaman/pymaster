@@ -1,3 +1,6 @@
+"""
+https://en.wikipedia.org/wiki/Divisibility_rule#Divisibility_rules_for_numbers_1%E2%80%9330
+"""
 def solve(n, t):
     if n == 1 and 2 <= t <= 9:
         print(t)
