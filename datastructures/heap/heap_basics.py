@@ -1,5 +1,9 @@
-import heapq
+"""
+NOTE: The heapq library only provides min-heap functionality
+If you want max-heap - you need to write custom methods.
+"""
 
+import heapq
 
 A = [1, 5, 3, 2, 4]
 
@@ -21,3 +25,7 @@ print(A, small)
 # Push a value into the heap and then pop and return the smallest element
 small_after_update = heapq.heappushpop(A, 7)
 print(small_after_update)
+
+# Print the smallest element of the heap without popping it
+e = A[0]
+print(A, e)
