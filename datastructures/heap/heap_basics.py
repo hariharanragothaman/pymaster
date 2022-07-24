@@ -1,6 +1,15 @@
 """
-NOTE: The heapq library only provides min-heap functionality
-If you want max-heap - you need to write custom methods.
+NOTE:
+    The heapq library only provides min-heap functionality
+    If you want max-heap - you need to write custom methods.
+
+    Use a heap - when all you care about is the largest (or) smallest elements
+               - and you do not need to support fast look-up, delete or search for arbitrary elements
+
+    Compute the k-largest elements  - min-heap
+    Compute the k-smallest elements - max-heap
+        < Decide based on what you want to evict >
+
 """
 
 import heapq
