@@ -19,6 +19,7 @@ A = [1, 5, 3, 2, 4]
 # Transform the List into heap in-place
 heapq.heapify(A)
 print(A)
+print(type(A))
 
 # Get the n number of smaller and largest values
 big_2 = heapq.nlargest(2, A)

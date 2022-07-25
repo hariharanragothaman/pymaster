@@ -23,6 +23,7 @@ It generates a break or new group every time the value of the key function chang
 result = []
 
 for is_decreasing, group in itertools.groupby(A, Monotonic()):
+    print(is_decreasing, list(group))
     if is_decreasing:
         result.append(list(group)[::-1])
     else:
