@@ -11,3 +11,7 @@ def sieve(n):
     prime[0] = 0
     prime[1] = 0
     print(prime)
+
+
+if __name__ == '__main__':
+    sieve(10)
