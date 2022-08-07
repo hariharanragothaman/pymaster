@@ -27,7 +27,6 @@ def dijkstra(n, graph, start):
     return distance_map, parents_map
 
 
-
 if __name__ == "__main__":
     # Initial I/P
     inp = [[2, 1, 1], [2, 3, 1], [3, 4, 1]]

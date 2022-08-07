@@ -5,6 +5,10 @@ Given a string - reorder it to from palindrome
 from collections import Counter
 
 
+def check_if_palindrome_can_be_formed(s):
+    return sum(v % 2 for k, v in Counter(s).items()) <= 1
+
+
 def palindrome_reorder(s):
     # Check if palindrome can be formed
     n = len(s)

@@ -1,6 +1,6 @@
 def compute_hash(s):
     p = 53
-    m = 10 ** 9 + 9
+    m = 10**9 + 9
     hash_value = 0
     pow = 1
 
@@ -13,7 +13,7 @@ def compute_hash(s):
 def compute_hash_faster(s):
     n = len(s)
     p = 53
-    m = 10 ** 9 + 9
+    m = 10**9 + 9
 
     # Pre-computing the powers of 31
     power_mod = [1]
