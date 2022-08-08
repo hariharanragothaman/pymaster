@@ -1,16 +1,4 @@
-"""
-# Smarter Template for getting the middle value
-
-def binary_search_smart():
-    left, right = 0, 10**18
-    condition = <>
-    while left < right:
-        mid = left + right + 1 >> 1
-        if condition:
-            left = mid
-        else:
-            right = mid - 1
-"""
+from bisect import bisect_left
 
 
 # TEMPLATE #1: Usual approach - when we know the number exists, and we are searching for it's index
@@ -30,9 +18,19 @@ def binary_search_gen(array, target):
     return -1
 
 
+# Smarter Template for getting the middle value
+def binary_search_smart():
+    left, right = 0, 10 ** 18
+    condition = None
+    while left < right:
+        mid = left + right + 1 >> 1
+        if condition:
+            left = mid
+        else:
+            right = mid - 1
+
+
 # TEMPLATE #2 - Advanced Binary Search
-
-
 def binary_search_advanced(array, target):
     if len(array) == 0:
         return -1
@@ -77,10 +75,6 @@ def binary_search_new(nums, target):
 
 # TEMPLATE #4 - Bisect and its advantages
 # Binary search recipe using bisect
-
-from bisect import bisect_left
-
-
 def binary_search(array, val):
     index = bisect_left(array, val)
     if index != len(array) and array[index] == val:
