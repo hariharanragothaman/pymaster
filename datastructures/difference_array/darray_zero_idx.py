@@ -4,7 +4,7 @@ print(A)
 n = len(A)
 
 # Creating a difference array
-diff = [0] * n
+diff = [0] * (n+2)
 print(diff)
 
 for i in range(n):

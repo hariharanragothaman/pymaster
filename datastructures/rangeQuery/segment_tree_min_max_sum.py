@@ -58,4 +58,6 @@ if __name__ == "__main__":
     seg_obj = SegmentTree(arr, function=max)
     print(seg_obj.tree)
     result = seg_obj.query(0, 7)
+    result = seg_obj.query(2, 2)
+    result = seg_obj.query(2, 5)
     print("The result is: ", result)
