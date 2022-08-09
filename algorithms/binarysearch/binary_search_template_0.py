@@ -1,5 +1,22 @@
 from bisect import bisect_left
 
+"""
+Sharing this code-snippet:
+Sometimes, when we are searching we might not know if it's idx, idx-1
+
+for s in sums1:
+    remain=goal-s
+    # binary search for the value in s2 that's closest to the remaining value
+    i2 = bisect_left(s2,remain)
+                    
+    if i2 < len(s2):
+        ans = min(ans,abs(remain-s2[i2]))
+    if i2 > 0:
+        ans = min(ans,abs(remain-s2[i2-1]))
+        
+return ans
+"""
+
 
 # TEMPLATE #1: Usual approach - when we know the number exists, and we are searching for it's index
 def binary_search_gen(array, target):

@@ -1,5 +1,5 @@
 """
-Write a program which takes a non-negative integer and return the largest integer whose aquare
+Write a program which takes a non-negative integer and return the largest integer whose square
 is less than or equal to the given integer.
 16 - 4
 300 - 17  { 17^2 - 289 and 289 < 300}

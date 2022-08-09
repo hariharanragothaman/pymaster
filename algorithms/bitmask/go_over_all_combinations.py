@@ -1,4 +1,4 @@
-"""
+www"""
 This is the Apple Division problem from CSES.
 TL; DR - Split array into sets such that difference is minimal and print the difference
 So ideally we are selecting elements for each subset --> here we are dividing it into 2 subsets.
