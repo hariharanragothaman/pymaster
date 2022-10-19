@@ -54,6 +54,7 @@ for i in range(n):
 
 
 def get_right_diagonals(arr):
+    # i+j == A.size() - 1
     rows = len(arr)
     hashmap = {}
     for i in range(rows):
