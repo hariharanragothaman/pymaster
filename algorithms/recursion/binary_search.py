@@ -3,7 +3,7 @@
 # File              : binary_search.py
 # Author            : cppygod
 # Date              : 07.11.2022
-# Last Modified Date: 07.11.2022
+# Last Modified Date: 09.11.2022
 # Last Modified By  : cppygod
 """
 செயல் பேசும் ஆழம் இங்கே சொற்கள் பேசுமா?
@@ -139,9 +139,11 @@ def solve(A, n, l, r, num):
         if A[pivot] == num:
             return pivot + 1
         elif A[pivot] > num:
-            return solve(A, n, l, pivot - 1, num)
+            r = pivot - 1 
+            return solve(A, n, l, r, num)
         elif A[pivot] < num:
-            return solve(A, n, pivot + 1, r, num)
+            l = pivot + 1
+            return solve(A, n, l, r, num)
     else:
         return -1
 
@@ -151,13 +153,13 @@ def main():
     n = int(input())
     l, r = 0, n - 1
     A = input_as_array()
-    debug2(A)
+    #debug2(A)
     q = int(input())
     while q:
         num = int(input())
         ans = solve(A, n, l, r, num)
         print(ans)
-        debug()
+        #debug()
         q -= 1
 
 
