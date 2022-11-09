@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# File              : suffix_sum.py
+# File              : knapsack.py
 # Author            : cppygod
 # Date              : 08.11.2022
-# Last Modified Date: 08.11.2022
+# Last Modified Date: 09.11.2022
 # Last Modified By  : cppygod
 """
 செயல் பேசும் ஆழம் இங்கே சொற்கள் பேசுமா?
@@ -56,32 +56,34 @@ def debug5(msg):
 
 start_time = time.time()
 
-def solve(A, n, m, ans):
-    if n <= 0:
-        ans += A[n]
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve(A, n, m, ans)
 
-def solve2(A, n, m, ans, limit):
-    if n == limit:
-        return ans 
+def solve(A, n, capacity):
+    # Print the maximum value of the knapsack
+    if n == 0 or capacity == 0:
+        return 0
+
+    # if weight is more than the capacity W,
+    # item cannnot be included...
+    if A[n-1][0] > capacity:
+        # Skip this element and call for the next element
+        return solve(A, n-1, capacity)
     else:
-        ans += A[n]
-        n -= 1
-        return solve2(A, n, m, ans, limit)
+        # We need to include this value
+        return max(A[n-1][1] + solve(A, n-1, capacity - A[n-1][0]), 
+                             solve(A, n-1, capacity)
+                  )
+
 
 def main():
-    n, m = input_as_array()
-    A = input_as_array()
-    if m >= n:
-        result = solve(A, n-1, m, 0)
-    else:
-        limit = n-m-1 
-        result = solve2(A, n-1, m, 0, limit)
+    n, capacity = input_as_array()
+    A = []
+    for _ in range(n):
+        weight, value = input_as_array()
+        A.append((weight, value))
+    debug2(A)
+    result = solve(A, n, capacity)
     print(result)
+
 
 if __name__ == "__main__":
     if os.path.exists("data.in"):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# File              : suffix_sum.py
+# File              : creating_expression.py
 # Author            : cppygod
 # Date              : 08.11.2022
 # Last Modified Date: 08.11.2022
@@ -56,32 +56,73 @@ def debug5(msg):
 
 start_time = time.time()
 
-def solve(A, n, m, ans):
-    if n <= 0:
-        ans += A[n]
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve(A, n, m, ans)
 
-def solve2(A, n, m, ans, limit):
-    if n == limit:
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve2(A, n, m, ans, limit)
+"""
+The question is asking if we can put either '+' or '-'
+between these numbers to get the value X 
+Let's assume there are 3 numbers
+1 2 3
+n numbers -> n-1 operands
+So here + and -
+2 operands - 2^n combinations 
+One way is to recursively go through all the combinations...
+
+So what's the best recurse condition here?
+Hmm. Thinking
+Also in the question he is asking - YES or NO only.
+So we can do + and - and then keep adding to a set()
+if it's in visited then 'YES', else 'NO'
+BFS can also be done in recursion? Right? Lol.
+Okay good thinking.
+
+In our recursive calls.. either + is going pr - is going
+we need both
+
+1 2 3 
+
+1 + 2 = 3 
+1 - 2 = -1
+
+3 + 3
+3 - 3
+
+-1 + 3
+-1 - 3
+
+1 + 2 + 3
+1 + 2
+
+In implementation wise instead of popping, we can 
+simply use indices 
+
+Because in BFS you end up appending to the Queue
+Here you can't append stuff? after you pop 
+So use indices to your advantage...OK now, let's keep trying..
+
+"""
+
+class Solution:
+    def __init__(self) -> None:
+        self.count = 0
+
+    def solve(self, A, n, i, x, ans):
+        if i == n:
+            if ans == x:
+                self.count += 1
+        else:
+            self.solve(A, n, i + 1, x, ans + A[i])
+            self.solve(A, n, i + 1, x, ans - A[i])
 
 def main():
-    n, m = input_as_array()
+    n, x = input_as_array()
     A = input_as_array()
-    if m >= n:
-        result = solve(A, n-1, m, 0)
+    s = Solution()
+    s.solve(A, n, 1, x, ans=A[0])
+    if s.count > 0:
+        print("YES")
     else:
-        limit = n-m-1 
-        result = solve2(A, n-1, m, 0, limit)
-    print(result)
+        print("NO")
+
 
 if __name__ == "__main__":
     if os.path.exists("data.in"):

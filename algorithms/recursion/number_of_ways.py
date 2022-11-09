@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# File              : suffix_sum.py
+# File              : number_of_ways.py
 # Author            : cppygod
 # Date              : 08.11.2022
-# Last Modified Date: 08.11.2022
+# Last Modified Date: 09.11.2022
 # Last Modified By  : cppygod
 """
 செயல் பேசும் ஆழம் இங்கே சொற்கள் பேசுமா?
@@ -56,32 +56,32 @@ def debug5(msg):
 
 start_time = time.time()
 
-def solve(A, n, m, ans):
-    if n <= 0:
-        ans += A[n]
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve(A, n, m, ans)
+"""
+This is always increasing...
 
-def solve2(A, n, m, ans, limit):
-    if n == limit:
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve2(A, n, m, ans, limit)
+"""
+
+class Solution:
+    def __init__(self) -> None:
+        self.count = 0
+
+    def solve(self, start, end):
+        if start == end:
+            self.count += 1
+        elif start > end:
+            return
+        else:
+            self.solve(start + 1 , end)
+            self.solve(start + 2, end)
+            self.solve(start + 3, end)
+
 
 def main():
     n, m = input_as_array()
-    A = input_as_array()
-    if m >= n:
-        result = solve(A, n-1, m, 0)
-    else:
-        limit = n-m-1 
-        result = solve2(A, n-1, m, 0, limit)
-    print(result)
+    s = Solution()
+    s.solve(n, m)
+    print(s.count)
+    debug()
 
 if __name__ == "__main__":
     if os.path.exists("data.in"):

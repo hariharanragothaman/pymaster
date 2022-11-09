@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# File              : suffix_sum.py
+# File              : array_average.py
 # Author            : cppygod
 # Date              : 08.11.2022
 # Last Modified Date: 08.11.2022
@@ -56,32 +56,22 @@ def debug5(msg):
 
 start_time = time.time()
 
-def solve(A, n, m, ans):
-    if n <= 0:
-        ans += A[n]
-        return ans 
-    else:
-        ans += A[n]
-        n -= 1
-        return solve(A, n, m, ans)
 
-def solve2(A, n, m, ans, limit):
-    if n == limit:
-        return ans 
+def solve(A, n, t, total):
+    if n == 0:
+        total += (A[n] / t)
+        return total
     else:
-        ans += A[n]
+        total += (A[n] / t)
         n -= 1
-        return solve2(A, n, m, ans, limit)
+        return solve(A, n, t, total)
+
 
 def main():
-    n, m = input_as_array()
+    n = int(input())
     A = input_as_array()
-    if m >= n:
-        result = solve(A, n-1, m, 0)
-    else:
-        limit = n-m-1 
-        result = solve2(A, n-1, m, 0, limit)
-    print(result)
+    ans = solve(A, n-1, n, 0)
+    print('%.6f'%ans)
 
 if __name__ == "__main__":
     if os.path.exists("data.in"):
