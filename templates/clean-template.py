@@ -76,6 +76,7 @@ def debug2(value):
 # endregion
 
 # region math
+
 MOD = 1000000007
 # MOD=998244353
 alpha = "abcdefghijklmnopqrstuvwxyz"
