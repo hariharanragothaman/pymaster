@@ -31,9 +31,11 @@ def solve():
     for _ in range(n):
         a, b = input_as_array()
         A.append((a, b))
-    A = sorted(A, key= lambda x: x[1])
-    debug2(A)
 
+    # Take the greedy approach, and check when
+    # next movie can be watched after sorting
+
+    A = sorted(A, key= lambda x: x[1])
     cnt = 0
     current_end = 0
     for start, end in A:
