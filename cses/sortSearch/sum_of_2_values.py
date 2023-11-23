@@ -29,6 +29,12 @@ def solve():
     n, target = input_as_array()
     A = input_as_array()
 
+    B = sorted(A)
+    idx = bisect_left(B, target)
+    if idx == 0:
+        print("IMPOSSIBLE")
+        return
+
     H = {}
     for i, value in enumerate(A, 1):
         H[value] = i
