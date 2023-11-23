@@ -26,7 +26,21 @@ from functools import reduce
 # region solution
 
 def solve():
-    pass
+    n = int(input())
+    A = []
+    for _ in range(n):
+        a, b = input_as_array()
+        A.append((a, b))
+    A = sorted(A, key= lambda x: x[1])
+    debug2(A)
+
+    cnt = 0
+    current_end = 0
+    for start, end in A:
+        if start >= current_end:
+            current_end = end
+            cnt += 1
+    print(cnt)
 
 
 
