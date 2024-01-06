@@ -45,6 +45,7 @@ def main():
 
     for i in range(testcases):
         solve()
+        debug('-')
 
     if os.path.exists("data.in"):
         print(f"Time Elapsed: {time.time() - start_time} seconds")
