@@ -25,15 +25,15 @@ from functools import reduce
 
 # region solution
 
-def solve():
-    pass
+def solve() -> None:
+    print("Hello World")
 
 
 
 # endregion
 
 # region testcase
-def main():
+def main() -> None:
     if os.path.exists("data.in"):
         sys.stdin = open("data.in", "r")
         sys.stdout = open("data.out", "w")
@@ -56,16 +56,16 @@ def main():
 
 # region debug
 
-def input_as_array():
+def input_as_array() -> list[int]:
     return list(map(int, input().split()))
 
 
-def debug(char):
+def debug(char) -> None:
     if os.path.exists("data.in"):
         print(char * 25)
 
 
-def debug2(value):
+def debug2(value) -> None:
     if os.path.exists("data.in"):
         print(value)
 
