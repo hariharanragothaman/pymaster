@@ -26,8 +26,7 @@ from functools import reduce
 # region solution
 
 def solve() -> None:
-    print("Hello World")
-
+    pass
 
 
 # endregion
@@ -39,7 +38,6 @@ def main() -> None:
         sys.stdout = open("data.out", "w")
 
     start_time = time.time()
-
     # testcases = int(input())
     testcases = 1
 
