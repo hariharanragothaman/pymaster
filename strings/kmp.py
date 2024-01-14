@@ -36,7 +36,7 @@ def knuth_morris_pratt(text, pattern):
 
 
 if __name__ == "__main__":
-    text = "GACGCCA"
+    text = "GACGCCACGC"
     pattern = "CGC"
     result = knuth_morris_pratt(text, pattern)
     print(f"The result is: {result}")
