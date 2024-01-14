@@ -1,4 +1,4 @@
-def toBaseK(self, n: int, k: int) -> str:
+def to_base_k(self, n: int, k: int) -> str:
     res = []
     while n:
         n, rem = divmod(n, k)
