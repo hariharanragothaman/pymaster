@@ -76,10 +76,11 @@ MOD = 1000000007
 # MOD=998244353
 alpha = "abcdefghijklmnopqrstuvwxyz"
 alpha = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
-hmap = {}
+alpha_map = {}
+cnt = 1
 for c in alpha:
-    hmap[c] = False
-
+    alpha_map[c] = cnt
+    cnt += 1
 
 def copy2d(lst):
     return [x[:] for x in lst]  # Copy 2D list... Avoid Using Deepcopy
