@@ -38,8 +38,7 @@ def main() -> None:
         sys.stdout = open("data.out", "w")
 
     start_time = time.time()
-    # testcases = int(input())
-    testcases = 1
+    testcases = int(input())
 
     for i in range(testcases):
         solve()
