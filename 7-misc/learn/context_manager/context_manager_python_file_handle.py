@@ -21,6 +21,6 @@ class OpenFile:
         return
 
 
-with OpenFile("../misc/test.txt", "r") as f:
+with OpenFile("../test.txt", "r") as f:
     print("Reading a file")
     print(f.read())

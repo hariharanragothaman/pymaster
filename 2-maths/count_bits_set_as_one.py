@@ -22,6 +22,6 @@ def count_bits_set_to_one(n) -> int:
 
 
 if __name__ == "__main__":
-    n = int(input())
+    n =  5
     result = count_bits_set_to_one(n)
     print(f"The number of bits is: {result}")
