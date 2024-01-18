@@ -17,6 +17,9 @@ def generate_x_length_substring(s, x):
             ans.append(sub_str)
     return ans
 
+def check_for_common_substring(s1, s2):
+    return "YES" if set(list(s1)) & set(list(s2)) != set() else "NO"
+
 def longest_common_substring(A, B):
     if set(A).isdisjoint(B):
         return 0
