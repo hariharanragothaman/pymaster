@@ -1,4 +1,4 @@
-def dayOfYear(self, D: str) -> int:
+def day_of_the_year(self, D: str) -> int:
     D = [int(c) for c in D.split('-')][::-1]
     print(D)
     H = {1: 31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}

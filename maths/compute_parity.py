@@ -10,9 +10,7 @@ The parity of a binary word is:
 
 def find_parity_using_string(n: int) -> int:
     str_n = str(n)
-    if str_n.count("1") % 2 == 0:
-        return 0
-    return 1
+    return str_n.count("1") % 2 == 0
 
 
 if __name__ == "__main__":
