@@ -26,7 +26,7 @@ def longest_increasing_subsequence(arr):
         print(f"The temp is: {temp}")
     return temp
 
-def longestCommonSubsequence(self, a: str, b: str) -> int:
+def longest_common_subsequence(self, a: str, b: str) -> int:
     lengths = [[0] * (len(b) + 1) for i in range(len(a) + 1)]
     for i, x in enumerate(a):
         for j, y in enumerate(b):
@@ -49,7 +49,6 @@ def longestCommonSubsequence(self, a: str, b: str) -> int:
             y -= 1
 
     return len(result)
-
 
 
 if __name__ == "__main__":
