@@ -1,5 +1,27 @@
-from collections import defaultdict
+from difflib import SequenceMatcher
 
+def generate_all_substring(s):
+    ans = []
+    for left in range(len(s)):
+        for right in range(left, len(s)):
+            substring = s[left : right + 1]
+            ans.append(substring)
+    return ans
+
+def generate_x_length_substring(s, x):
+    ans = []
+    n = len(s)
+    for length in range(x, x + 1):
+        for i in range(0, n - length + 1):
+            sub_str = s[i : i + length]
+            ans.append(sub_str)
+    return ans
+
+def longest_common_substring(A, B):
+    if set(A).isdisjoint(B):
+        return 0
+    a, b, size = SequenceMatcher(None, A, B, autojunk=False).find_longest_match(0, len(A), 0, len(B))
+    return size
 
 def count_distinct_substrings(s):
     n = len(s)
@@ -14,19 +36,14 @@ def count_distinct_substrings(s):
     # Basically doing hash-values in prefix sum
     hash_values = [0] * (n + 1)
     for i in range(n):
-        hash_values[i + 1] = (
-            hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]
-        ) % m
+        hash_values[i + 1] = (hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]) % m
     print("The hash-values are:", hash_values)
 
     # Actual solution starts here
-
     count = 0
     n = len(s)
     for length in range(1, n + 1):
-
         result_set = set()
-
         for i in range(0, n - length + 1):
             string = s[i : i + length]
             # print("The value of length ",length, i)
@@ -41,6 +58,5 @@ def count_distinct_substrings(s):
     return count
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     s = "Success"
-    count_distinct_substrings(s)

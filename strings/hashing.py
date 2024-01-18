@@ -1,3 +1,6 @@
+import functools
+
+
 def compute_hash(s):
     p = 53
     m = 10**9 + 9
@@ -23,12 +26,13 @@ def compute_hash_faster(s):
     # Basically doing hash-values in prefix sum
     hash_values = [0] * (n + 1)
     for i in range(n):
-        hash_values[i + 1] = (
-            hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]
-        ) % m
+        hash_values[i + 1] = (hash_values[i] + (ord(s[i]) - ord("a") + 1) * power_mod[i]) % m
     print("The hashvalues are:", hash_values)
-
     return hash_values[-1]
+
+def string_hash(s, mod):
+    mult = 997
+    return functools.reduce(lambda v, c: ((v * mult) + ord(c)) % mod, s, 0)
 
 
 if __name__ == "__main__":
@@ -38,3 +42,7 @@ if __name__ == "__main__":
 
     # Calling compute_hash_faster
     compute_hash_faster(s)
+
+    s = "codeforces"
+    res = string_hash(s, 11)
+    print(res)
