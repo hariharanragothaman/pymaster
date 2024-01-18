@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: Hariharan Ragothaman
-# @Date:   2022-04-22 16:59:23
-# @Last Modified by:   Hariharan Ragothaman
-# @Last Modified time: 2022-04-22 17:02:30
-
-
 def split_into_same_char_segments(s):
     n, ans, ch = len(s), [], ""
 
@@ -22,5 +15,5 @@ def split_into_same_char_segments(s):
         ans.append(s[-1])
     print(ans)
 
-
-split_into_same_char_segments("aaaabbbab")
+if __name__ == '__main__':
+    split_into_same_char_segments("aaaabbbab")
