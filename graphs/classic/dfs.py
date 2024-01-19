@@ -33,18 +33,20 @@ def dfs(graph, start=0):
 def DFS(graph, start):
     visited = {}
     result_path = []
+
     for k in graph:
         visited[k] = False
 
-    stack = [start]
     visited[start] = True
-
     q = deque([start])
+
     while q:
         vertex = q.pop()
         for neighbours in graph[vertex]:
             if visited[neighbours] is False:
-                stack.append(neighbours)
+                visited[neighbours] = True
+                q.append(neighbours)
+        result_path.append(vertex)
     return result_path
 
 if __name__ == '__main__':
