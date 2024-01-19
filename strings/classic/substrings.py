@@ -1,4 +1,5 @@
 from difflib import SequenceMatcher
+from collections import Counter
 
 def generate_all_substring(s):
     ans = []
@@ -25,6 +26,18 @@ def longest_common_substring(A, B):
         return 0
     a, b, size = SequenceMatcher(None, A, B, autojunk=False).find_longest_match(0, len(A), 0, len(B))
     return size
+
+def count_substrings_anagrams(s):
+    ctr = Counter()
+    for i in range(len(s)):
+        for j in range(i + 1, len(s) + 1):
+            sl = tuple(sorted(s[i:j]))
+            ctr[sl] = ctr.get(sl, 0) + 1
+
+    result = 0
+    for k, v in ctr.items():
+        result += (v * (v - 1)) // 2
+    return result
 
 def count_distinct_substrings(s):
     n = len(s)
@@ -63,3 +76,7 @@ def count_distinct_substrings(s):
 
 if __name__ == '__main__':
     s = "Success"
+    string = "ifailuhkqq"
+    """ (i, i) (q, q), (ifa, fai) at - [0] [3] [8] [9] [0, 1, 2] [1, 2, 3] """
+    result = count_substrings_anagrams(string)
+    print(result)
