@@ -1,6 +1,7 @@
 """
 Functions for finding paths in graphs.
 """
+from collections import defaultdict
 
 def find_path(graph, start, end, path=[]):
     """
@@ -22,11 +23,14 @@ def find_all_path(graph, start, end, path=[]):
     Find all paths between two nodes using recursion and backtracking
     """
     path = path + [start]
+
     if start == end:
         return [path]
     if not start in graph:
         return []
+
     paths = []
+
     for node in graph[start]:
         if node not in path:
             newpaths = find_all_path(graph, node, end, path)
@@ -51,3 +55,13 @@ def find_shortest_path(graph, start, end, path=[]):
                 if not shortest or len(newpath) < len(shortest):
                     shortest = newpath
     return shortest
+
+if __name__ == '__main__':
+    edges = [[4, 3, 1], [3, 2, 4], [3], [4], []]
+    graph = defaultdict(list)
+    for i, e in enumerate(edges):
+        for d in e:
+            graph[i].append(d)
+    print("The graph is:", graph)
+    paths = find_all_path(start=0, end=4)
+    print("All paths are", paths)
