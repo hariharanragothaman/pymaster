@@ -1,5 +1,5 @@
-# GCD and LCM of b/w 2 numbers
 from functools import reduce
+from math import gcd
 
 
 def gcd(a, b):
@@ -13,6 +13,4 @@ def lcm(a, b):
 
 
 # using reduce to find gcd for all multiple numbers at the same time. - you can also pass lambda to it.
-from math import gcd
-
 reduce(gcd, [2, 4, 8], 3)

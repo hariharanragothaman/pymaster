@@ -10,7 +10,7 @@ from math import gcd
 from collections import *
 
 
-def subarrayGCD(self, nums: List[int], k: int) -> int:
+def subarrayGCD(self, nums, k: int) -> int:
     cnt = 0
     n = len(nums)
     hmap = Counter()
