@@ -21,6 +21,20 @@ def generate_x_length_substring(s, x):
 def check_for_common_substring(s1, s2):
     return "YES" if set(list(s1)) & set(list(s2)) != set() else "NO"
 
+def find_longest_substring_length_of_char(s, char):
+    n = len(s)
+    max_count = 0
+    tmp = 0
+    for i in range(0, n):
+        if s[i] == char:
+            tmp += 1
+        else:
+            max_count = max(max_count, tmp)
+            tmp = 0
+    max_count = max(max_count, tmp)
+    return max_count
+
+
 def longest_common_substring(A, B):
     if set(A).isdisjoint(B):
         return 0
@@ -80,3 +94,7 @@ if __name__ == '__main__':
     """ (i, i) (q, q), (ifa, fai) at - [0] [3] [8] [9] [0, 1, 2] [1, 2, 3] """
     result = count_substrings_anagrams(string)
     print(result)
+
+    s = "HelloWorld"
+    ans = find_longest_substring_length_of_char(s, 'l')
+    print(ans)
