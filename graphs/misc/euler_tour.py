@@ -1,8 +1,4 @@
 """
-
-"""
-
-"""
 Some basic concepts
 
 1. A Eulerian path is a path in a graph that passes through all of its edges exactly once. 

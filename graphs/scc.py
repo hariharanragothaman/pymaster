@@ -1,10 +1,12 @@
 """
-Given a directed graph, return a list of lists, containing
-the strongly connected components in topological order
+Given a directed graph, find_SCC returns a list of lists containing
+the strongly connected components in topological order.
+
+Note that this implementation can be also be used to check if a directed graph is a
+DAG, and in that case it can be used to find the topological ordering of the nodes.
 """
 
-
-def find_strongly_connected_components(graph):
+def find_SCC(graph):
     SCC, S, P = [], [], []
     depth = [0] * len(graph)
 
