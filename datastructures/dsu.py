@@ -11,6 +11,7 @@ Future applications
 
 """
 
+from typing import List
 
 class DisJointSets:
     def __init__(self, size: int) -> None:
