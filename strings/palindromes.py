@@ -4,7 +4,7 @@ def is_palindrome(s):
     return s == s[::-1]
 
 def check_if_palindrome_can_be_formed(s):
-    return sum(v % 2 for k, v in Counter(s).items()) <= 1
+    return sum(v % 2 == 1 for v in Counter(s).values()) <= 1
 
 def reorder_string_to_form_palindrome(s):
     n = len(s)
