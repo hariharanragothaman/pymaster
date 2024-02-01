@@ -1,32 +1,42 @@
-# Considering Merge Sort at the moment.
+def merge_sort(A):
+    if len(A) <= 1:
+        return A
 
+    mid = len(A) >> 1
+    left, right = A[:mid], A[mid:]
 
-def merge_sort(nums):
-    if len(nums) <= 1:
-        return nums
-    pivot = int(len(nums) / 2)
-    left_list = merge_sort(nums[0:pivot])
-    right_list = merge_sort(nums[:pivot])
-    return merge(left_list, right_list)
+    # Recursive call on each half
+    merge_sort(left)
+    merge_sort(right)
 
+    # Two iterators for traversing the two halves
+    i = 0
+    j = 0
 
-def merge(left_list, right_list):
-    left_cursor = right_cursor = 0
-    ret = []
+    # Iterator for the main list
+    k = 0
 
-    while left_cursor < len(left_list) and right_list < len(right_list):
-        if left_list[left_cursor] < right_list[right_cursor]:
-            ret.append(left_list[left_cursor])
-            left_cursor += 1
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            # The value from the left half has been used
+            A[k] = left[i]
+            # Move the iterator forward
+            i += 1
         else:
-            ret.append(right_list[right_cursor])
-            right_cursor += 1
+            A[k] = right[j]
+            j += 1
+        # Move to the next slot
+        k += 1
 
-    ret.extend(left_list[left_cursor:])
-    ret.extend(right_list[right_cursor:])
-    return ret
+    # For all the remaining values
+    while i < len(left):
+        A[k] = left[i]
+        i += 1
+        k += 1
 
+    while j < len(right):
+        A[k]=right[j]
+        j += 1
+        k += 1
 
-nums = [3, 1, 0, 9, 8, 4, 2]
-result = merge_sort(nums)
-print(result)
+    return A
