@@ -15,6 +15,7 @@ import time
 
 from collections import Counter
 
+
 def solve():
     n, m = input_as_array()
     A = input_as_array()
@@ -32,10 +33,6 @@ def solve():
             return
 
     print("Yes")
-
-
-def test():
-    pass
 
 
 def main() -> None:
