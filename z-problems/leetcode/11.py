@@ -1,4 +1,6 @@
 # Container with Most Water
+
+from typing import List
 class Solution:
     def maxArea(self, H: List[int]) -> int:
         n = len(H)
