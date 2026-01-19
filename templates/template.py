@@ -8,7 +8,7 @@ But I have promises to keep,
 And miles to go before I sleep,
 And miles to go before I sleep.
 """
-
+import itertools
 # region imports
 
 import os, sys, math, cmath, time, collections
@@ -26,7 +26,12 @@ from functools import reduce
 # region solution
 
 def solve() -> None:
-    pass
+    n = input()
+    MOD = 998244353
+    
+    V = n * int(n)
+    V = int(V)
+    print(V % MOD)
 
 
 # endregion
@@ -38,7 +43,7 @@ def main() -> None:
         sys.stdout = open("data.out", "w")
 
     start_time = time.time()
-    testcases = int(input())
+    testcases = 1
 
     for i in range(testcases):
         solve()
