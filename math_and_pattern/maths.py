@@ -3,6 +3,7 @@ import operator
 
 from functools import reduce
 from math import gcd
+from typing import Any
 
 """
 # When you XOR, things will cancel out.
@@ -96,3 +97,30 @@ reduce(gcd, [2, 4, 8], 3)
 
 def lcm(a, b):
     return a * b / gcd(a, b)
+
+
+class Matrix:
+    def __init__(self, A):
+        self.A = A
+
+    def get_rows(A) -> list:
+        """Return the rows of the matrix"""
+        return [[c for c in r] for r in A]
+
+    def get_columns(A) -> zip[Any]:
+        """Return the cols of the matrix"""
+        return zip(*A)
+
+    def rotate_matrix(A):
+        """Rotate a matrix - Transpose & reverse each row"""
+        A[:] = zip(*A[::-1])
+        return A
+
+    def transpose(A):
+        """Getting Transpose [ R->C, C->R ]"""
+        A[:] = zip(*A)
+        return A
+
+if __name__ == '__main__':
+    M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    m_obj = Matrix(M)

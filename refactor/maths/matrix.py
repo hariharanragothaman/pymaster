@@ -7,7 +7,6 @@ def transpose(A):
     A[:] = zip(*A)
     return A
 
-
 def rotate_matrix(A):
     """Rotate a matrix - Transpose & reverse each row"""
     A[:] = zip(*A[::-1])
