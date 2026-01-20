@@ -1,16 +1,4 @@
-"""
-செயல் பேசும் ஆழம் இங்கே சொற்கள் பேசுமா?
-
-Focus, Determination and Sheer-Will
-
-The woods are lovely, dark and deep,
-But I have promises to keep,
-And miles to go before I sleep,
-And miles to go before I sleep.
-"""
-import itertools
 # region imports
-
 import os, sys, math, cmath, time, collections
 from math import ceil, floor, log, log2, sqrt, gcd, factorial, pow, pi, log10
 from collections import deque, Counter, OrderedDict, defaultdict
@@ -20,19 +8,12 @@ from itertools import accumulate, permutations, combinations, combinations_with_
 from io import BytesIO, IOBase
 from functools import reduce
 
-
 # endregion
 
 # region solution
 
 def solve() -> None:
-    n = input()
-    MOD = 998244353
-    
-    V = n * int(n)
-    V = int(V)
-    print(V % MOD)
-
+    pass
 
 # endregion
 
@@ -53,88 +34,25 @@ def main() -> None:
         print(f"Time Elapsed: {time.time() - start_time} seconds")
         sys.stdout.close()
 
-
 # endregion
 
 # region debug
-
 def input_as_array() -> list[int]:
     return list(map(int, input().split()))
-
 
 def debug(char) -> None:
     if os.path.exists("data.in"):
         print(char * 25)
 
-
 def debug2(value) -> None:
     if os.path.exists("data.in"):
         print(value)
-
-
-# endregion
-
-# region math
-
-MOD = 1000000007
-# MOD=998244353
-alpha = "abcdefghijklmnopqrstuvwxyz"
-alpha = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
-alpha_map = {}
-cnt = 1
-for c in alpha:
-    alpha_map[c] = cnt
-    cnt += 1
-
-def copy2d(lst):
-    return [x[:] for x in lst]  # Copy 2D list... Avoid Using Deepcopy
-
-
-def no_of_digits(num):
-    return 0 if num <= 0 else int(math.log10(num)) + 1
-
-
-def powm(num, power, mod=MOD):
-    return pow(num, power, mod)
-
-
-def isPowerOfTwo(x):
-    return x and (not (x & (x - 1)))
-
-
-def LSB(num):
-    """Returns Least Significant Bit of a number (Rightmost bit) in O(1)"""
-    return num & -num
-
-
-def MSB(num):
-    """Returns Most Significant Bit of a number (Leftmost bit) in O(logN)"""
-    if num <= 0:
-        return 0
-    ans = 1
-    num >>= 1
-    while num:
-        num >>= 1
-        ans <<= 1
-    return ans
-
-
-def gcd(x, y):
-    while y:
-        x, y = y, x % y
-    return x
-
-
-def lcm(x, y):
-    return (x * y) // gcd(x, y)
-
 
 # endregion
 
 # region fastio
 
 BUFSIZE = 8192
-
 
 class FastIO(IOBase):
     newlines = 0
@@ -169,7 +87,6 @@ class FastIO(IOBase):
         if self.writable:
             os.write(self._fd, self.buffer.getvalue())
             self.buffer.truncate(0), self.buffer.seek(0)
-
 
 class IOWrapper(IOBase):
     def __init__(self, file):
