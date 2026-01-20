@@ -72,6 +72,29 @@ class Math:
             x >>= 1
         return dist
 
+    def go_over_all_combinations(self, A):
+        n = len(A)
+        for mask in range(1 << n):
+            subset = [A[i] for i in range(n) if mask & (1 << i)]
+            print(subset)
+
+    def apple_divison(self, A, n):
+        total = sum(A)
+        ans = float("inf")
+        limit = 1 << n
+
+        # Going through all the combinations generated
+        for msk in range(limit):
+            s = 0
+            # Remember Length of the bit-array
+            for j in range(0, n):
+                # Check and get if the ith bit is set
+                if msk & (1 << j):
+                    s += A[j]
+                current_difference = abs((total - s) - s)
+                ans = min(ans, current_difference)
+        print(ans)
+
 if __name__ == '__main__':
     m = Math()
     result = m.to_binary(5, 5)
@@ -79,3 +102,6 @@ if __name__ == '__main__':
 
     f = m.factors(16)
     print(f)
+
+    A = [1, 3, 5, 4]
+    m.go_over_all_combinations(A)
