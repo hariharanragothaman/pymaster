@@ -52,3 +52,6 @@ if __name__ == '__main__':
     m = Math()
     result = m.to_binary(5, 5)
     print(result)
+
+    f = m.factors(16)
+    print(f)
