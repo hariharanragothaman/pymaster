@@ -14,6 +14,25 @@ class Strings:
         boolean = [False] * 26
         return dict(zip(alpha, boolean))
 
+    def check_anagrams(self, S1, S2):
+        ctr1 = Counter(S1)
+        ctr2 = Counter(S2)
+        return ctr1 == ctr2
+
+    def check_anagrams_version2(str1, str2):
+        hmap1 = [0] * 26
+        hmap2 = [0] * 26
+
+        for char in str1:
+            pos = ord(char) - ord("a")
+            hmap1[pos] += 1
+
+        for char in str2:
+            pos = ord(char) - ord("a")
+            hmap2[pos] += 1
+
+        return hmap1 == hmap2
+
 class Palindromes:
     def is_palindrome(self, s):
         return s == s[::-1]
