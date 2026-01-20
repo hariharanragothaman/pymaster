@@ -5,14 +5,11 @@ from functools import reduce
 def factors(n) -> set:
     return set(reduce(list.__add__,([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0),))
 
-
-
 def gcd(x, y):
     """greatest common divisor of x and y"""
     while y:
         x, y = y, x % y
     return x
-
 
 def memo_dict(f):
     """memoization decorator for a function taking a single argument"""
@@ -22,7 +19,6 @@ def memo_dict(f):
             return ret
         
     return memodict().__getitem__
-
 
 def pollard_rho(n):
     """returns a random factor of n"""
