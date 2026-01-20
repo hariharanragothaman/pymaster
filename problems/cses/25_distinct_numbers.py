@@ -1,4 +1,5 @@
 import sys
 
-n = int(sys.stdin.buffer.readline())
-print(len(set(map(int, sys.stdin.buffer.readline().split()))))
+input = sys.stdin.readline
+n = int(input())
+print(len(set(map(int, input().split()))))
