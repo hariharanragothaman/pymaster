@@ -21,7 +21,7 @@ class Strings:
         ctr2 = Counter(S2)
         return ctr1 == ctr2
 
-    def check_anagrams_version2(str1, str2):
+    def check_anagrams_version2(self, str1, str2):
         hmap1 = [0] * 26
         hmap2 = [0] * 26
 
@@ -34,6 +34,20 @@ class Strings:
             hmap2[pos] += 1
 
         return hmap1 == hmap2
+
+    def find_first_index(self, a, target):
+        idx = a.find(target)
+        return idx
+
+    def find_between_two_indexes(self, a, target, low, high):
+        idx = a.find(target, low, high)
+        return idx
+
+    # returns the highest index
+    def find_highest_index(self, a, target):
+        idx = a.rfind(target, 0, len(a))
+        return idx
+
 
 class SplitStrings:
     def split_into_same_char_segments(s):
