@@ -18,5 +18,6 @@ def search(state):
         state.remove(candidate)
 
 
-state = []
-search(state)
+if __name__ == '__main__':
+    state = []
+    search(state)
