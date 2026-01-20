@@ -14,5 +14,4 @@ def bellman_ford(n, edges, start):
         if dist[u] + d < dist[v]:
             return None
     """
-
     return dist, pred
