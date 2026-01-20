@@ -17,6 +17,29 @@ class PrefixSum:
             total += A[i]
         return total
 
+class RangeQuery:
+    """
+    Range Query to get min and max b/w left and right
+    """
+    def __init__(self, data, func=min):
+        self.func = func
+        self._data = _data = [list(data)]
+        i, n = 1, len(_data[0])
+        while 2 * i <= n:
+            prev = _data[-1]
+            _data.append([func(prev[j], prev[j + i]) for j in range(n - 2 * i + 1)])
+            i <<= 1
+
+    def query(self, start, stop):
+        """func of data[start, stop)"""
+        depth = (stop - start).bit_length() - 1
+        return self.func(
+            self._data[depth][start], self._data[depth][stop - (1 << depth)]
+        )
+
+    def __getitem__(self, idx):
+        return self._data[0][idx]
+
 class Query:
     def __init__(self):
         MAX = 500
@@ -103,6 +126,13 @@ class SparseTable:
 
 if __name__ == '__main__':
     A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    # Range Query Class
+    arr = [5, 8, 6, 3, 2, 7, 2, 6]
+    range_obj = RangeQuery(arr)
+    op = range_obj.query(2, 5)
+    print(op)
+
 
     q = Query()
     min_value = q.RMQ(A, len(A), 3, 7)
