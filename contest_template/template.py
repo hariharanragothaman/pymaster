@@ -1,3 +1,12 @@
+"""
+    செயல் பேசும் ஆழம் இங்கே சொற்கள் பேசுமா?
+    Focus, Determination and Sheer-Will
+    The woods are lovely, dark and deep,
+    But I have promises to keep,
+    And miles to go before I sleep,
+    And miles to go before I sleep.
+"""
+
 # region imports
 import os, sys, math, cmath, time, collections
 from math import ceil, floor, log, log2, sqrt, gcd, factorial, pow, pi, log10
