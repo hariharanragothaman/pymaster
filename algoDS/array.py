@@ -17,8 +17,8 @@ class Array:
             print(x, y)
 
     def consecutive_combinations_of_two(self, A):
-        for x, y in zip(A, A[1:], A[2:]):
-            print(x, y, x)
+        for x, y, z in zip(A, A[1:], A[2:]):
+            print(x, y, z)
 
     def flatten_list(self, A):
         flat_list = [item for sublist in A for item in sublist]
