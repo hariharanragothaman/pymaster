@@ -102,3 +102,30 @@ def powerset(iterable):
     "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
+
+def to_base_k(self, n: int, k: int) -> str:
+    res = []
+    while n:
+        n, rem = divmod(n, k)
+        res.append(rem)
+    res = res[::-1]
+    res = ''.join(str(c) for c in res)
+    return res
+
+
+def x_pow_n_mod_m(x, n, m):
+    if n == 0:
+        return 1
+    if n % 2 == 0:
+        return x_pow_n_mod_m((x * x) % m, n // 2, m)
+    return x * x_pow_n_mod_m(x, n - 1, m) % m
+
+def compute_square_root(k):
+    left, right = 0, k
+    while left <= right:
+        pivot = (left + right) // 2
+        if pow(pivot, 2) <= k:
+            left = pivot + 1
+        else:
+            right = pivot - 1
+    return left - 1
