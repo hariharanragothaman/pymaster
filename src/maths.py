@@ -1,6 +1,8 @@
 import math
 import operator
+
 from functools import reduce
+from math import gcd
 
 class Math:
     @staticmethod
@@ -42,6 +44,8 @@ class Math:
             print("n is:", n)
         return num_bits
 
+    def is_coprime(a, b) -> bool:
+        return gcd(a, b) == 1
 
 
 if __name__ == '__main__':
