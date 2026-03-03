@@ -1,5 +1,9 @@
 # PyMaster
 
+[![CI](https://github.com/hariharanragothaman/pymaster/actions/workflows/python-ci.yml/badge.svg?branch=master)](https://github.com/hariharanragothaman/pymaster/actions/workflows/python-ci.yml)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Quick Python recipes and solved snippets for competitive programming (`Codeforces`, `CSES`, `LeetCode`), optimized for **correctness and accuracy** over verbosity.
 
 ## Principles
