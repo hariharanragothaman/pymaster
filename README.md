@@ -15,15 +15,3 @@ Quick Python recipes and solved snippets for competitive programming (`Codeforce
 - `z-problems/` - scratchpad, learning notes, drafts, alternates, and experiments
 - `contest_template/` - starter template(s) for new contests
 
-## Current Workflow
-
-1. Draft/experiment in `z-problems/`.
-2. Once stable, promote to `algo/` or `datastructure/` (or `problems/` for a solved task).
-3. Keep one final version; archive alternatives in `z-problems/`.
-
-## Next Cleanup Pass (planned)
-
-- Remove or consolidate duplicate implementations.
-- Promote only validated versions to canonical folders.
-- Standardize naming and indexing conventions.
-
